@@ -18,6 +18,7 @@ var state: Data = load("res://game/characters/roger/character_roger.tres")
 var _hint_timer: float = 0.0
 var _hint_tier_given: int = 0      # 0 = none given yet, 1/2/3 = that tier given
 var _is_timer_running: bool = false
+var _pending_hint: int = 0         # Set by _process, delivered via call_deferred
 
 # Current room's hint strings, keyed as "tier1_talkative", "tier2_balanced", etc.
 var _room_hints: Dictionary = {}
@@ -115,10 +116,21 @@ func _process(delta: float) -> void:
 	if not THRESHOLDS.has(mode):
 		return
 	var t: Dictionary = THRESHOLDS[mode]
-	if _hint_tier_given < 2 and _hint_timer >= t["tier2"]:
-		await _give_hint(2)
-	elif _hint_tier_given < 3 and _hint_timer >= t["tier3"]:
-		await _give_hint(3)
+	# Set flag only — never await inside _process (Godot frame-loop constraint)
+	if _hint_tier_given < 2 and _hint_timer >= t["tier2"] and _pending_hint == 0:
+		_pending_hint = 2
+		call_deferred("_deliver_pending_hint")
+	elif _hint_tier_given < 3 and _hint_timer >= t["tier3"] and _pending_hint == 0:
+		_pending_hint = 3
+		call_deferred("_deliver_pending_hint")
+
+
+func _deliver_pending_hint() -> void:
+	if _pending_hint == 0:
+		return
+	var tier: int = _pending_hint
+	_pending_hint = 0
+	await _give_hint(tier)
 
 
 func _give_hint(tier: int) -> void:
