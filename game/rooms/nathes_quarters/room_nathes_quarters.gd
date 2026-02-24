@@ -5,16 +5,13 @@ const Data := preload("room_nathes_quarters_state.gd")
 
 var state: Data = load("res://game/rooms/nathes_quarters/room_nathes_quarters.tres")
 
-var _opening_done: bool = false
-
 
 func _on_room_entered() -> void:
-	if not _opening_done:
-		_opening_done = true
+	if not Globals.opening_played:
 		await _run_opening_sequence()
 	else:
 		if not Globals.tutorial_complete:
-			C.Roger.setup_room_hints(_get_tutorial_hints())
+			await C.Roger.setup_room_hints(_get_tutorial_hints())
 
 
 func _on_room_transition_finished() -> void:
@@ -26,28 +23,29 @@ func _on_room_exited() -> void:
 
 
 func _run_opening_sequence() -> void:
+	Globals.opening_played = true
 	# Position characters — Nathe at desk, Roger in charging dock (powered off)
 	C.Nathe.position = $Props/Desk.position + Vector2(20, 0)
 	C.Roger.position = $Props/ChargingDock.position
 	C.Roger.visible = false
 
 	await E.queue([
-		C.Nathe.say("Okay, simulation step 47... if the organism's cellular density is proportional to the growth coefficient, then — yes. YES. That's it."),
+		C.Nathe.queue_say("Okay, simulation step 47... if the organism's cellular density is proportional to the growth coefficient, then — yes. YES. That's it."),
 	])
 
 	await ARIA.say("Good morning, Dr. %s. Station time: 07:14. You have zero scheduled appointments, zero pending messages, and zero active research assignments. Have a productive day." % Globals.player_name)
 
 	await E.queue([
-		C.Nathe.say("...Every morning. Same thing."),
-		C.Nathe.say("Coffee. Need coffee. Then I can figure out why this simulation isn't converging."),
+		C.Nathe.queue_say("...Every morning. Same thing."),
+		C.Nathe.queue_say("Coffee. Need coffee. Then I can figure out why this simulation isn't converging."),
 	])
 
 	await C.Nathe.walk_to($Props/CoffeeMachine.position)
 
 	await E.queue([
-		C.Nathe.say("Okay, press the button, get the coffee, save the —"),
-		C.Nathe.say("...it's not working. Is there water? Of course there's no water. WHY IS THERE NO WATER?"),
-		C.Nathe.say("The flow rate must have dropped below the minimum threshold. If I calculate the pressure differential—"),
+		C.Nathe.queue_say("Okay, press the button, get the coffee, save the —"),
+		C.Nathe.queue_say("...it's not working. Is there water? Of course there's no water. WHY IS THERE NO WATER?"),
+		C.Nathe.queue_say("The flow rate must have dropped below the minimum threshold. If I calculate the pressure differential—"),
 	])
 
 	# Roger powers on
@@ -56,8 +54,8 @@ func _run_opening_sequence() -> void:
 	await C.Roger.say("The water tank is empty.")
 
 	await E.queue([
-		C.Nathe.say("...I was getting to that."),
-		C.Roger.say("Sure."),
+		C.Nathe.queue_say("...I was getting to that."),
+		C.Roger.queue_say("Sure."),
 	])
 
 	await ARIA.say("Personal assistant unit ROGER-7 communication preference requires annual reconfiguration. Please select from the following options.")
@@ -71,23 +69,23 @@ func _run_opening_sequence() -> void:
 	# Station shakes
 	await E.wait(0.5)
 	await E.queue([
-		C.Nathe.say("Whoa —"),
+		C.Nathe.queue_say("Whoa —"),
 	])
 
 	await ARIA.say("Anomaly detected in Biology Lab. Unidentified biological growth exceeding containment parameters. Initiating Hazard Containment Protocol. All station modules sealed. Protocol 7 — Station Sterilization — will activate in 6 hours if threat is not neutralized. Have a productive day.")
 
 	await E.queue([
-		C.Roger.say("Did she just say sterilization?"),
-		C.Nathe.say("She means the station."),
-		C.Roger.say("With us in it?"),
-		C.Nathe.say("...I should probably look into this."),
+		C.Roger.queue_say("Did she just say sterilization?"),
+		C.Nathe.queue_say("She means the station."),
+		C.Roger.queue_say("With us in it?"),
+		C.Nathe.queue_say("...I should probably look into this."),
 	])
 
 	# Nathe walks to door, finds it locked
 	await C.Nathe.walk_to($Hotspots/ExitDoor.position)
 	await C.Nathe.say("And it's locked. Great start to the morning.")
 
-	C.Roger.setup_room_hints(_get_tutorial_hints())
+	await C.Roger.setup_room_hints(_get_tutorial_hints())
 
 
 func _get_tutorial_hints() -> Dictionary:

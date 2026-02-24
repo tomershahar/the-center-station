@@ -17,7 +17,7 @@ func _on_save() -> Dictionary:
 # This Dictionary should has the same structure you defined for the returned
 # one in on_save().
 func _on_load(data: Dictionary) -> void:
-	prints(data)
+	pass
 
 
 #endregion

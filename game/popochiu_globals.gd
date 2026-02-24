@@ -19,6 +19,8 @@ var act: int = 1  # 1, 2, or 3
 
 # === PUZZLE COMPLETION FLAGS ===
 var tutorial_complete: bool = false
+var opening_played: bool = false
+var nathe_in_bed: bool = false
 var protocol_reclassification_complete: bool = false
 var chemistry_complete: bool = false
 var physics_complete: bool = false

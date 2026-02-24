@@ -16,19 +16,19 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
 		"talkative":
 			Globals.roger_mode = "talkative"
 			await E.queue([
-				C.Nathe.say("More information is always better. Statistically."),
-				C.Roger.say("I'll do my best."),
+				C.Nathe.queue_say("More information is always better. Statistically."),
+				C.Roger.queue_say("I'll do my best."),
 			])
 		"balanced":
 			Globals.roger_mode = "balanced"
 			await E.queue([
-				C.Nathe.say("A good scientist knows when to ask for help."),
-				C.Roger.say("Works for me."),
+				C.Nathe.queue_say("A good scientist knows when to ask for help."),
+				C.Roger.queue_say("Works for me."),
 			])
 		"quiet":
 			Globals.roger_mode = "quiet"
 			await E.queue([
-				C.Nathe.say("I'm a PhD. I don't need a robot to —"),
-				C.Roger.say("Fine."),
+				C.Nathe.queue_say("I'm a PhD. I don't need a robot to —"),
+				C.Roger.queue_say("Fine."),
 			])
 	stop()
