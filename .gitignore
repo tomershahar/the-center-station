@@ -1,0 +1,10 @@
+# Godot 4 generated files
+.godot/
+*.translation
+export_presets.cfg
+
+# Imported assets (Godot regenerates these)
+**/*.import
+
+# macOS
+.DS_Store
