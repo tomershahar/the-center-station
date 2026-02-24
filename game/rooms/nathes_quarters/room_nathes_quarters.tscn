@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dnq6peugv6fue"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/room_nathes_quarters.gd" id="1_swk5r"]
+
+[node name="RoomNathesQuarters" type="Node2D" unique_id=415263796]
+script = ExtResource("1_swk5r")
+script_name = "NathesQuarters"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=315562916]
+
+[node name="Props" type="Node2D" parent="." unique_id=1430982212]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=314633549]
+
+[node name="Regions" type="Node2D" parent="." unique_id=629759044]
+
+[node name="Markers" type="Node2D" parent="." unique_id=556839988]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1599573053]

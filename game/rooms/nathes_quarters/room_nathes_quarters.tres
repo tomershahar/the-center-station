@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cdgxwpl4xa61"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/room_nathes_quarters_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "NathesQuarters"
+script = ExtResource("1_a1hly")
+script_name = "NathesQuarters"
+scene = "res://game/rooms/nathes_quarters/room_nathes_quarters.tscn"
