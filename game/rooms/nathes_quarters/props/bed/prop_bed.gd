@@ -18,6 +18,7 @@ func _on_click() -> void:
 		await ARIA.say("Rest cycle complete. Wake-up sequence registered. Secondary lock: DISENGAGED. Have a productive day.")
 		Globals.tutorial_complete = true
 		C.Roger.stop_hints()
+		get_tree().current_scene.get_node("Hotspots/ExitDoor").enabled = true
 		await E.queue([
 			C.Roger.say("I can't believe that worked."),
 			C.Nathe.say("I can't believe the solution to a galaxy-ending crisis started with me getting back into bed."),

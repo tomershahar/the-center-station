@@ -26,6 +26,11 @@ func _on_room_exited() -> void:
 
 
 func _run_opening_sequence() -> void:
+	# Position characters — Nathe at desk, Roger in charging dock (powered off)
+	C.Nathe.position = $Props/Desk.position + Vector2(20, 0)
+	C.Roger.position = $Props/ChargingDock.position
+	C.Roger.visible = false
+
 	await E.queue([
 		C.Nathe.say("Okay, simulation step 47... if the organism's cellular density is proportional to the growth coefficient, then — yes. YES. That's it."),
 	])
@@ -37,11 +42,20 @@ func _run_opening_sequence() -> void:
 		C.Nathe.say("Coffee. Need coffee. Then I can figure out why this simulation isn't converging."),
 	])
 
+	await C.Nathe.walk_to($Props/CoffeeMachine.position)
+
 	await E.queue([
 		C.Nathe.say("Okay, press the button, get the coffee, save the —"),
 		C.Nathe.say("...it's not working. Is there water? Of course there's no water. WHY IS THERE NO WATER?"),
 		C.Nathe.say("The flow rate must have dropped below the minimum threshold. If I calculate the pressure differential—"),
-		C.Roger.say("The water tank is empty."),
+	])
+
+	# Roger powers on
+	await E.wait(0.5)
+	C.Roger.visible = true
+	await C.Roger.say("The water tank is empty.")
+
+	await E.queue([
 		C.Nathe.say("...I was getting to that."),
 		C.Roger.say("Sure."),
 	])
@@ -54,6 +68,8 @@ func _run_opening_sequence() -> void:
 
 	await C.Roger.say("Noted. I'll be exactly as helpful as I always am.")
 
+	# Station shakes
+	await E.wait(0.5)
 	await E.queue([
 		C.Nathe.say("Whoa —"),
 	])
@@ -65,8 +81,11 @@ func _run_opening_sequence() -> void:
 		C.Nathe.say("She means the station."),
 		C.Roger.say("With us in it?"),
 		C.Nathe.say("...I should probably look into this."),
-		C.Nathe.say("And the door is locked. Great start to the morning."),
 	])
+
+	# Nathe walks to door, finds it locked
+	await C.Nathe.walk_to($Hotspots/ExitDoor.position)
+	await C.Nathe.say("And it's locked. Great start to the morning.")
 
 	C.Roger.setup_room_hints(_get_tutorial_hints())
 
