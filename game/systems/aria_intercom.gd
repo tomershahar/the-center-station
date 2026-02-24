@@ -16,10 +16,7 @@ extends Node
 ##   - Always ends relevant statements with "Have a productive day."
 ##   - Never malicious — just rigidly literal
 
-signal aria_finished
-
-# Internal: emitted when ARIA speech completes (for await chaining)
-var _speech_complete: bool = false
+signal aria_finished(text: String)
 
 
 ## Primary method: ARIA says something.
