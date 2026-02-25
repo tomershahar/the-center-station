@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://prp000000000k" path="res://game/rooms/storage_bay/props/signature_scanner/prop_signature_scanner.tscn" id="5_ss"]
 [ext_resource type="PackedScene" uid="uid://prp000000000n" path="res://game/rooms/storage_bay/props/equipment_shelves/prop_equipment_shelves.tscn" id="6_es"]
 
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
 [node name="RoomStorageBay" type="Node2D"]
 script = ExtResource("1_room")
 script_name = "StorageBay"
@@ -40,3 +41,6 @@ position = Vector2(20, 140)
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 90)

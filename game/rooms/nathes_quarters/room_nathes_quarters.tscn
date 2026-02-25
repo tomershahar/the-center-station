@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dnq6peugv6fue"]
 
-[ext_resource type="Script" path="res://game/rooms/nathes_quarters/room_nathes_quarters.gd" id="1_swk5r"]
+[ext_resource type="Script" uid="uid://cg10u8jg3xfje" path="res://game/rooms/nathes_quarters/room_nathes_quarters.gd" id="1_swk5r"]
 [ext_resource type="PackedScene" uid="uid://c5nx8k2qwr7pa" path="res://game/rooms/nathes_quarters/props/bed/prop_bed.tscn" id="2_bed"]
-[ext_resource type="PackedScene" uid="uid://e6wz0n5tu9q2c" path="res://game/rooms/nathes_quarters/props/desk/prop_desk.tscn" id="3_desk"]
-[ext_resource type="PackedScene" uid="uid://g8yb2p7vw1s4e" path="res://game/rooms/nathes_quarters/props/coffee_machine/prop_coffee_machine.tscn" id="4_coffee"]
-[ext_resource type="PackedScene" uid="uid://i0ad4r9xy3u6g" path="res://game/rooms/nathes_quarters/props/pressure_pad/prop_pressure_pad.tscn" id="5_pad"]
-[ext_resource type="PackedScene" uid="uid://k2cf6t1z05w8i" path="res://game/rooms/nathes_quarters/props/charging_dock/prop_charging_dock.tscn" id="6_dock"]
-[ext_resource type="PackedScene" uid="uid://m4eh8v3b27y0k" path="res://game/rooms/nathes_quarters/props/door_panel/prop_door_panel.tscn" id="7_panel"]
-[ext_resource type="PackedScene" uid="uid://o6gj0x5d49a2m" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.tscn" id="8_door"]
+[ext_resource type="PackedScene" uid="uid://bci5fl8lb2vbk" path="res://game/rooms/nathes_quarters/props/desk/prop_desk.tscn" id="3_desk"]
+[ext_resource type="PackedScene" uid="uid://dekghobndtxdm" path="res://game/rooms/nathes_quarters/props/coffee_machine/prop_coffee_machine.tscn" id="4_coffee"]
+[ext_resource type="PackedScene" uid="uid://bagmxogguo4nw" path="res://game/rooms/nathes_quarters/props/pressure_pad/prop_pressure_pad.tscn" id="5_pad"]
+[ext_resource type="PackedScene" uid="uid://dcio0p7ivq6py" path="res://game/rooms/nathes_quarters/props/charging_dock/prop_charging_dock.tscn" id="6_dock"]
+[ext_resource type="PackedScene" uid="uid://bi5vhqckemdqa" path="res://game/rooms/nathes_quarters/props/door_panel/prop_door_panel.tscn" id="7_panel"]
+[ext_resource type="PackedScene" uid="uid://dk7w8semgnnsc" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.tscn" id="8_door"]
 
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
 [node name="RoomNathesQuarters" type="Node2D" unique_id=415263796]
 script = ExtResource("1_swk5r")
 script_name = "NathesQuarters"
@@ -20,27 +21,27 @@ popochiu_placeholder = null
 
 [node name="Props" type="Node2D" parent="." unique_id=1430982212]
 
-[node name="Bed" parent="Props" instance=ExtResource("2_bed")]
+[node name="Bed" parent="Props" unique_id=1069821529 instance=ExtResource("2_bed")]
 position = Vector2(60, 110)
 
-[node name="Desk" parent="Props" instance=ExtResource("3_desk")]
+[node name="Desk" parent="Props" unique_id=1488455459 instance=ExtResource("3_desk")]
 position = Vector2(200, 85)
 
-[node name="CoffeeMachine" parent="Props" instance=ExtResource("4_coffee")]
+[node name="CoffeeMachine" parent="Props" unique_id=438475173 instance=ExtResource("4_coffee")]
 position = Vector2(252, 88)
 
-[node name="PressurePad" parent="Props" instance=ExtResource("5_pad")]
+[node name="PressurePad" parent="Props" unique_id=1447172977 instance=ExtResource("5_pad")]
 position = Vector2(60, 122)
 
-[node name="ChargingDock" parent="Props" instance=ExtResource("6_dock")]
+[node name="ChargingDock" parent="Props" unique_id=1210088268 instance=ExtResource("6_dock")]
 position = Vector2(288, 118)
 
-[node name="DoorPanel" parent="Props" instance=ExtResource("7_panel")]
+[node name="DoorPanel" parent="Props" unique_id=901199181 instance=ExtResource("7_panel")]
 position = Vector2(305, 82)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=314633549]
 
-[node name="ExitDoor" parent="Hotspots" instance=ExtResource("8_door")]
+[node name="ExitDoor" parent="Hotspots" unique_id=1976964169 instance=ExtResource("8_door")]
 position = Vector2(314, 90)
 
 [node name="Regions" type="Node2D" parent="." unique_id=629759044]
@@ -48,3 +49,6 @@ position = Vector2(314, 90)
 [node name="Markers" type="Node2D" parent="." unique_id=556839988]
 
 [node name="Characters" type="Node2D" parent="." unique_id=1599573053]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 90)

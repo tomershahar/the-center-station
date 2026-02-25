@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://prp0000000002" path="res://game/rooms/main_corridor/props/maintenance_panel/prop_maintenance_panel.tscn" id="10_mp"]
 [ext_resource type="PackedScene" uid="uid://prp0000000005" path="res://game/rooms/main_corridor/props/corridor_intercom/prop_corridor_intercom.tscn" id="11_ci"]
 
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
 [node name="RoomMainCorridor" type="Node2D"]
 script = ExtResource("1_room")
 script_name = "MainCorridor"
@@ -60,3 +61,6 @@ position = Vector2(300, 40)
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 90)
