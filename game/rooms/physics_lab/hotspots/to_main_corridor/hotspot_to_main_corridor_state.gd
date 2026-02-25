@@ -1,4 +1,4 @@
-extends PopochiuHotspotData
+extends Resource
 
 
 func _on_save() -> Dictionary:

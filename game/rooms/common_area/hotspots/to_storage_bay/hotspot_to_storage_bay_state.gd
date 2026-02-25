@@ -1,1 +1,1 @@
-extends PopochiuHotspotData
+extends Resource
