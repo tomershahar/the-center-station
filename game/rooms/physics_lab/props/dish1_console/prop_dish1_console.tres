@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://phlp000000006"]
+
+[ext_resource type="Script" path="res://game/rooms/physics_lab/props/dish1_console/prop_dish1_console_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "Dish1Console"
+script = ExtResource("1_bst")
+script_name = "Dish1Console"
+scene = "res://game/rooms/physics_lab/props/dish1_console/prop_dish1_console.tscn"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://phlp000000005"]
+
+[ext_resource type="Script" path="res://game/rooms/physics_lab/props/dish1_console/prop_dish1_console.gd" id="1"]
+
+[node name="Dish1Console" type="Area2D"]
+script = ExtResource("1")
+script_name = "Dish1Console"
+description = "Dish 1 Console"
+interaction_polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

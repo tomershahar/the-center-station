@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://phlp00000000c"]
+
+[ext_resource type="Script" path="res://game/rooms/physics_lab/props/aria_comms_interface/prop_aria_comms_interface_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ARIACommsInterface"
+script = ExtResource("1_bst")
+script_name = "ARIACommsInterface"
+scene = "res://game/rooms/physics_lab/props/aria_comms_interface/prop_aria_comms_interface.tscn"

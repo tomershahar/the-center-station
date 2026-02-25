@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://phlr000000002"]
+
+[ext_resource type="Script" uid="uid://phlr000000001" path="res://game/rooms/physics_lab/room_physics_lab.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://phlh000000002" path="res://game/rooms/physics_lab/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
+[ext_resource type="PackedScene" uid="uid://phlp000000002" path="res://game/rooms/physics_lab/props/frequency_analyzer/prop_frequency_analyzer.tscn" id="3_fa"]
+[ext_resource type="PackedScene" uid="uid://phlp000000005" path="res://game/rooms/physics_lab/props/dish1_console/prop_dish1_console.tscn" id="4_d1"]
+[ext_resource type="PackedScene" uid="uid://phlp000000008" path="res://game/rooms/physics_lab/props/junction_box_diagram/prop_junction_box_diagram.tscn" id="5_jb"]
+[ext_resource type="PackedScene" uid="uid://phlp00000000b" path="res://game/rooms/physics_lab/props/aria_comms_interface/prop_aria_comms_interface.tscn" id="6_ac"]
+
+[node name="RoomPhysicsLab" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "PhysicsLab"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="FrequencyAnalyzer" parent="Props" instance=ExtResource("3_fa")]
+position = Vector2(160, 70)
+
+[node name="Dish1Console" parent="Props" instance=ExtResource("4_d1")]
+position = Vector2(60, 110)
+
+[node name="JunctionBoxDiagram" parent="Props" instance=ExtResource("5_jb")]
+position = Vector2(240, 90)
+
+[node name="ARIACommsInterface" parent="Props" instance=ExtResource("6_ac")]
+position = Vector2(280, 110)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

@@ -52,6 +52,7 @@ var has_chemical_supply_kit: bool = false
 var has_solvent_formula: bool = false              # From Chemistry Lab (data/formula, not item)
 var department_credentials_obtained: bool = false  # From Storage Bay, used for Physics Dish 3
 var chem_kit_installed: bool = false               # ChemicalSupplyKit used in Chemistry Lab slot
+var dish2_wired: bool = false                      # Dish 2 junction wired in Main Corridor (for Physics Lab puzzle)
 
 # === PLAYER-CHOSEN STRINGS ===
 var department_name: String = ""  # Player's fake department name (set in Storage Bay)

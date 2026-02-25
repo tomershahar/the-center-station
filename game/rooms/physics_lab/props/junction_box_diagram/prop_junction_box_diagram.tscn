@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://phlp000000008"]
+
+[ext_resource type="Script" path="res://game/rooms/physics_lab/props/junction_box_diagram/prop_junction_box_diagram.gd" id="1"]
+
+[node name="JunctionBoxDiagram" type="Area2D"]
+script = ExtResource("1")
+script_name = "JunctionBoxDiagram"
+description = "Junction Box Diagram"
+interaction_polygon = PackedVector2Array(-20, -15, 20, -15, 20, 15, -20, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-20, -15, 20, -15, 20, 15, -20, 15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

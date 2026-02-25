@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://phlp000000009"]
+
+[ext_resource type="Script" path="res://game/rooms/physics_lab/props/junction_box_diagram/prop_junction_box_diagram_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "JunctionBoxDiagram"
+script = ExtResource("1_bst")
+script_name = "JunctionBoxDiagram"
+scene = "res://game/rooms/physics_lab/props/junction_box_diagram/prop_junction_box_diagram.tscn"
