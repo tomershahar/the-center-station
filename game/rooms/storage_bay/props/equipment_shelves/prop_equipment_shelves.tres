@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000o"]
+
+[ext_resource type="Script" path="res://game/rooms/storage_bay/props/equipment_shelves/prop_equipment_shelves_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "EquipmentShelves"
+script = ExtResource("1_bst")
+script_name = "EquipmentShelves"
+scene = "res://game/rooms/storage_bay/props/equipment_shelves/prop_equipment_shelves.tscn"

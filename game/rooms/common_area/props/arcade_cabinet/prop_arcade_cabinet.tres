@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000f"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ArcadeCabinet"
+script = ExtResource("1_bst")
+script_name = "ArcadeCabinet"
+scene = "res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet.tscn"

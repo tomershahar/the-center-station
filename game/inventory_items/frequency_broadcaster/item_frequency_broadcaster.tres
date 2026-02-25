@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://inv0000000006"]
+
+[ext_resource type="Script" path="res://game/inventory_items/frequency_broadcaster/item_frequency_broadcaster_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "FrequencyBroadcaster"
+script = ExtResource("1_bst")
+script_name = "FrequencyBroadcaster"
+scene = "res://game/inventory_items/frequency_broadcaster/item_frequency_broadcaster.tscn"

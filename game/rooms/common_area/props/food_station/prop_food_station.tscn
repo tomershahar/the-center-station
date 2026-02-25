@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000h"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/food_station/prop_food_station.gd" id="1"]
+
+[node name="FoodStation" type="Area2D"]
+script = ExtResource("1")
+script_name = "FoodStation"
+description = "Food Station"
+interaction_polygon = PackedVector2Array(-22, -18, 22, -18, 22, 18, -22, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-22, -18, 22, -18, 22, 18, -22, 18)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

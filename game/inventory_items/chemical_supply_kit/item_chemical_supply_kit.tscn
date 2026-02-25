@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://inv0000000008"]
+
+[ext_resource type="Script" uid="uid://inv0000000007" path="res://game/inventory_items/chemical_supply_kit/item_chemical_supply_kit.gd" id="1"]
+
+[node name="ChemicalSupplyKit" type="TextureRect"]
+mouse_filter = 0
+size_flags_vertical = 4
+script = ExtResource("1")
+script_name = "ChemicalSupplyKit"
+description = "Chemical Supply Kit"
+cursor = 10

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://stb0000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/storage_bay/room_storage_bay_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "StorageBay"
+script = ExtResource("1_a1hly")
+script_name = "StorageBay"
+scene = "res://game/rooms/storage_bay/room_storage_bay.tscn"

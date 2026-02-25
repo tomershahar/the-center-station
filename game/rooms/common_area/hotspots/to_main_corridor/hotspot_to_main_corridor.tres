@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://hst000000000t"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/hotspots/to_main_corridor/hotspot_to_main_corridor_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ToMainCorridor"
+script = ExtResource("1_bst")
+script_name = "ToMainCorridor"
+scene = "res://game/rooms/common_area/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn"

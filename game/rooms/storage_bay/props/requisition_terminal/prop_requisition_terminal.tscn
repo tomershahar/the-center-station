@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000e"]
+
+[ext_resource type="Script" path="res://game/rooms/storage_bay/props/requisition_terminal/prop_requisition_terminal.gd" id="1"]
+
+[node name="RequisitionTerminal" type="Area2D"]
+script = ExtResource("1")
+script_name = "RequisitionTerminal"
+description = "Requisition Terminal"
+interaction_polygon = PackedVector2Array(-30, -24, 30, -24, 30, 24, -30, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-30, -24, 30, -24, 30, 24, -30, 24)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

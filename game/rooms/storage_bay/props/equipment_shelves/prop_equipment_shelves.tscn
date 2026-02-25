@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000n"]
+
+[ext_resource type="Script" path="res://game/rooms/storage_bay/props/equipment_shelves/prop_equipment_shelves.gd" id="1"]
+
+[node name="EquipmentShelves" type="Area2D"]
+script = ExtResource("1")
+script_name = "EquipmentShelves"
+description = "Equipment Shelves"
+interaction_polygon = PackedVector2Array(-32, -20, 32, -20, 32, 20, -32, 20)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-32, -20, 32, -20, 32, 20, -32, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

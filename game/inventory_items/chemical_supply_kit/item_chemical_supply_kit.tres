@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://inv0000000009"]
+
+[ext_resource type="Script" path="res://game/inventory_items/chemical_supply_kit/item_chemical_supply_kit_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ChemicalSupplyKit"
+script = ExtResource("1_bst")
+script_name = "ChemicalSupplyKit"
+scene = "res://game/inventory_items/chemical_supply_kit/item_chemical_supply_kit.tscn"

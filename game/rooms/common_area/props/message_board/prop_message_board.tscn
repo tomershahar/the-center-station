@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000n"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/message_board/prop_message_board.gd" id="1"]
+
+[node name="MessageBoard" type="Area2D"]
+script = ExtResource("1")
+script_name = "MessageBoard"
+description = "Message Board"
+interaction_polygon = PackedVector2Array(-24, -18, 24, -18, 24, 18, -24, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-24, -18, 24, -18, 24, 18, -24, 18)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

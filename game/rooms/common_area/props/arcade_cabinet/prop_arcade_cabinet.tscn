@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000e"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet.gd" id="1"]
+
+[node name="ArcadeCabinet" type="Area2D"]
+script = ExtResource("1")
+script_name = "ArcadeCabinet"
+description = "Arcade Cabinet"
+interaction_polygon = PackedVector2Array(-16, -28, 16, -28, 16, 28, -16, 28)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-16, -28, 16, -28, 16, 28, -16, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

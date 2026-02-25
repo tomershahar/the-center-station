@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000o"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/message_board/prop_message_board_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "MessageBoard"
+script = ExtResource("1_bst")
+script_name = "MessageBoard"
+scene = "res://game/rooms/common_area/props/message_board/prop_message_board.tscn"

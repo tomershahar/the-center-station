@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000l"]
+
+[ext_resource type="Script" path="res://game/rooms/common_area/props/common_area_intercom/prop_common_area_intercom_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "CommonAreaIntercom"
+script = ExtResource("1_bst")
+script_name = "CommonAreaIntercom"
+scene = "res://game/rooms/common_area/props/common_area_intercom/prop_common_area_intercom.tscn"

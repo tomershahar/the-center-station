@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000l"]
+
+[ext_resource type="Script" path="res://game/rooms/storage_bay/props/signature_scanner/prop_signature_scanner_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "SignatureScanner"
+script = ExtResource("1_bst")
+script_name = "SignatureScanner"
+scene = "res://game/rooms/storage_bay/props/signature_scanner/prop_signature_scanner.tscn"

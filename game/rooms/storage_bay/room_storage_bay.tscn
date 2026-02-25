@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://stb0000000002"]
+
+[ext_resource type="Script" uid="uid://stb0000000001" path="res://game/rooms/storage_bay/room_storage_bay.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://hst000000000y" path="res://game/rooms/storage_bay/hotspots/to_common_area/hotspot_to_common_area.tscn" id="2_ca"]
+[ext_resource type="PackedScene" uid="uid://prp000000000e" path="res://game/rooms/storage_bay/props/requisition_terminal/prop_requisition_terminal.tscn" id="3_rt"]
+[ext_resource type="PackedScene" uid="uid://prp000000000h" path="res://game/rooms/storage_bay/props/filing_cabinet/prop_filing_cabinet.tscn" id="4_fc"]
+[ext_resource type="PackedScene" uid="uid://prp000000000k" path="res://game/rooms/storage_bay/props/signature_scanner/prop_signature_scanner.tscn" id="5_ss"]
+[ext_resource type="PackedScene" uid="uid://prp000000000n" path="res://game/rooms/storage_bay/props/equipment_shelves/prop_equipment_shelves.tscn" id="6_es"]
+
+[node name="RoomStorageBay" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "StorageBay"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="RequisitionTerminal" parent="Props" instance=ExtResource("3_rt")]
+position = Vector2(80, 85)
+
+[node name="FilingCabinet" parent="Props" instance=ExtResource("4_fc")]
+position = Vector2(200, 100)
+
+[node name="SignatureScanner" parent="Props" instance=ExtResource("5_ss")]
+position = Vector2(130, 100)
+
+[node name="EquipmentShelves" parent="Props" instance=ExtResource("6_es")]
+position = Vector2(260, 80)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToCommonArea" parent="Hotspots" instance=ExtResource("2_ca")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
