@@ -1,4 +1,4 @@
-[gd_resource type="Resource" format=3 uid="uid://prp000000000i"]
+[gd_resource type="Resource" format=3 uid="uid://com0000000009"]
 
 [ext_resource type="Script" path="res://game/rooms/common_area/props/food_station/prop_food_station_state.gd" id="1_bst"]
 

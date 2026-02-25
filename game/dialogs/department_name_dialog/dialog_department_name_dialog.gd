@@ -2,7 +2,7 @@ extends PopochiuDialog
 
 
 func _on_start() -> void:
-	await get_tree().process_frame
+	await (Engine.get_main_loop() as SceneTree).process_frame
 
 
 func _option_selected(opt: PopochiuDialogOption) -> void:

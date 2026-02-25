@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://com0000000001" path="res://game/rooms/common_area/room_common_area.gd" id="1_room"]
 [ext_resource type="PackedScene" uid="uid://hst000000000s" path="res://game/rooms/common_area/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
 [ext_resource type="PackedScene" uid="uid://hst000000000v" path="res://game/rooms/common_area/hotspots/to_storage_bay/hotspot_to_storage_bay.tscn" id="3_sb"]
-[ext_resource type="PackedScene" uid="uid://prp000000000e" path="res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet.tscn" id="4_ac"]
-[ext_resource type="PackedScene" uid="uid://prp000000000h" path="res://game/rooms/common_area/props/food_station/prop_food_station.tscn" id="5_fs"]
-[ext_resource type="PackedScene" uid="uid://prp000000000k" path="res://game/rooms/common_area/props/common_area_intercom/prop_common_area_intercom.tscn" id="6_ci"]
-[ext_resource type="PackedScene" uid="uid://prp000000000n" path="res://game/rooms/common_area/props/message_board/prop_message_board.tscn" id="7_mb"]
+[ext_resource type="PackedScene" uid="uid://com0000000005" path="res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet.tscn" id="4_ac"]
+[ext_resource type="PackedScene" uid="uid://com0000000008" path="res://game/rooms/common_area/props/food_station/prop_food_station.tscn" id="5_fs"]
+[ext_resource type="PackedScene" uid="uid://com000000000b" path="res://game/rooms/common_area/props/common_area_intercom/prop_common_area_intercom.tscn" id="6_ci"]
+[ext_resource type="PackedScene" uid="uid://com000000000e" path="res://game/rooms/common_area/props/message_board/prop_message_board.tscn" id="7_mb"]
 
 [node name="RoomCommonArea" type="Node2D"]
 script = ExtResource("1_room")

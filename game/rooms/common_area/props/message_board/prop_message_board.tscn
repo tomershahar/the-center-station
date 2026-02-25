@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://prp000000000n"]
+[gd_scene load_steps=2 format=3 uid="uid://com000000000e"]
 
 [ext_resource type="Script" path="res://game/rooms/common_area/props/message_board/prop_message_board.gd" id="1"]
 

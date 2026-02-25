@@ -1,4 +1,4 @@
-[gd_resource type="Resource" format=3 uid="uid://prp000000000l"]
+[gd_resource type="Resource" format=3 uid="uid://com000000000c"]
 
 [ext_resource type="Script" path="res://game/rooms/common_area/props/common_area_intercom/prop_common_area_intercom_state.gd" id="1_bst"]
 

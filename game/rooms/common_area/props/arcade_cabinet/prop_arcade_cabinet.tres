@@ -1,4 +1,4 @@
-[gd_resource type="Resource" format=3 uid="uid://prp000000000f"]
+[gd_resource type="Resource" format=3 uid="uid://com0000000006"]
 
 [ext_resource type="Script" path="res://game/rooms/common_area/props/arcade_cabinet/prop_arcade_cabinet_state.gd" id="1_bst"]
 

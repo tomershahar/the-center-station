@@ -1,4 +1,4 @@
-[gd_resource type="Resource" format=3 uid="uid://prp000000000o"]
+[gd_resource type="Resource" format=3 uid="uid://com000000000f"]
 
 [ext_resource type="Script" path="res://game/rooms/common_area/props/message_board/prop_message_board_state.gd" id="1_bst"]
 

@@ -11,19 +11,20 @@ config_version=5
 [application]
 
 config/name="TheCenterStation"
+run/main_scene="uid://dnq6peugv6fue"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://game/popochiu_globals.gd"
+Globals="*uid://c2yrc86a27ift"
 Cursor="*uid://c2pqh7ajiuiy0"
 E="*uid://rda8wggldt5o"
-R="*res://game/autoloads/r.gd"
-C="*res://game/autoloads/c.gd"
-I="*res://game/autoloads/i.gd"
-D="*res://game/autoloads/d.gd"
-A="*res://game/autoloads/a.gd"
+R="*uid://3kk10xc8xty"
+C="*uid://dqpc7ddyscsp"
+I="*uid://dra2uoc2gtcal"
+D="*uid://c6gugkithegt4"
+A="*uid://4al1ldnlrrn5"
 G="*uid://bg5y1i4icreec"
 ARIA="*res://game/systems/aria_intercom.gd"
 
