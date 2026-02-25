@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://o6gj0x5d49a2m"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.gd" id="1"]
+
+[node name="ExitDoor" type="Area2D"]
+script = ExtResource("1")
+script_name = "ExitDoor"
+description = "Exit Door"
+interaction_polygon = PackedVector2Array(-8, -18, 8, -18, 8, 18, -8, 18)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-8, -18, 8, -18, 8, 18, -8, 18)

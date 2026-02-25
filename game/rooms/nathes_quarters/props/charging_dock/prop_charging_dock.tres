@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://l3dg7u2a16x9j"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/charging_dock/prop_charging_dock_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ChargingDock"
+script = ExtResource("1_bst")
+script_name = "ChargingDock"
+scene = "res://game/rooms/nathes_quarters/props/charging_dock/prop_charging_dock.tscn"

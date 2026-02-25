@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://p7hk1y6e50b3n"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ExitDoor"
+script = ExtResource("1_bst")
+script_name = "ExitDoor"
+scene = "res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.tscn"

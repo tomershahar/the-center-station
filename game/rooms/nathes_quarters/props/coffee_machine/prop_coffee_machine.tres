@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://h9zc3q8wx2t5f"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/coffee_machine/prop_coffee_machine_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "CoffeeMachine"
+script = ExtResource("1_bst")
+script_name = "CoffeeMachine"
+scene = "res://game/rooms/nathes_quarters/props/coffee_machine/prop_coffee_machine.tscn"

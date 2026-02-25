@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://i0ad4r9xy3u6g"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/pressure_pad/prop_pressure_pad.gd" id="1"]
+
+[node name="PressurePad" type="Area2D"]
+script = ExtResource("1")
+script_name = "PressurePad"
+description = "Pressure Pad"
+interaction_polygon = PackedVector2Array(-5, -3, 5, -3, 5, 3, -5, 3)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-5, -3, 5, -3, 5, 3, -5, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

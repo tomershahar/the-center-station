@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://g8yb2p7vw1s4e"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/coffee_machine/prop_coffee_machine.gd" id="1"]
+
+[node name="CoffeeMachine" type="Area2D"]
+script = ExtResource("1")
+script_name = "CoffeeMachine"
+description = "Coffee Machine"
+interaction_polygon = PackedVector2Array(-6, -7, 6, -7, 6, 7, -6, 7)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-6, -7, 6, -7, 6, 7, -6, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

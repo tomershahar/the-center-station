@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://j1be5s0yz4v7h"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/pressure_pad/prop_pressure_pad_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "PressurePad"
+script = ExtResource("1_bst")
+script_name = "PressurePad"
+scene = "res://game/rooms/nathes_quarters/props/pressure_pad/prop_pressure_pad.tscn"
