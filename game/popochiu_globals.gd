@@ -51,6 +51,7 @@ var has_chemical_supply_kit: bool = false
 # NOTE: has_solvent_formula replaces has_two_stage_solvent (v04 design change)
 var has_solvent_formula: bool = false              # From Chemistry Lab (data/formula, not item)
 var department_credentials_obtained: bool = false  # From Storage Bay, used for Physics Dish 3
+var chem_kit_installed: bool = false               # ChemicalSupplyKit used in Chemistry Lab slot
 
 # === PLAYER-CHOSEN STRINGS ===
 var department_name: String = ""  # Player's fake department name (set in Storage Bay)

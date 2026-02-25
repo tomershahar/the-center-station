@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://chlr000000002"]
+
+[ext_resource type="Script" uid="uid://chlr000000001" path="res://game/rooms/chemistry_lab/room_chemistry_lab.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://chlh000000002" path="res://game/rooms/chemistry_lab/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
+[ext_resource type="PackedScene" uid="uid://chlp000000002" path="res://game/rooms/chemistry_lab/props/whiteboard/prop_whiteboard.tscn" id="3_wb"]
+[ext_resource type="PackedScene" uid="uid://chlp000000005" path="res://game/rooms/chemistry_lab/props/petri_dish/prop_petri_dish.tscn" id="4_pd"]
+[ext_resource type="PackedScene" uid="uid://chlp000000008" path="res://game/rooms/chemistry_lab/props/reagent_acid/prop_reagent_acid.tscn" id="5_ra"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000b" path="res://game/rooms/chemistry_lab/props/reagent_base/prop_reagent_base.tscn" id="6_rb"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000e" path="res://game/rooms/chemistry_lab/props/reagent_saline/prop_reagent_saline.tscn" id="7_rs"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000h" path="res://game/rooms/chemistry_lab/props/reagent_organic_solvent/prop_reagent_organic_solvent.tscn" id="8_ro"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000k" path="res://game/rooms/chemistry_lab/props/mixing_station/prop_mixing_station.tscn" id="9_ms"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000n" path="res://game/rooms/chemistry_lab/props/spectrometer/prop_spectrometer.tscn" id="10_sp"]
+[ext_resource type="PackedScene" uid="uid://chlp00000000q" path="res://game/rooms/chemistry_lab/props/chem_supply_slot/prop_chem_supply_slot.tscn" id="11_cs"]
+
+[node name="RoomChemistryLab" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "ChemistryLab"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Whiteboard" parent="Props" instance=ExtResource("3_wb")]
+position = Vector2(40, 50)
+
+[node name="PetriDish" parent="Props" instance=ExtResource("4_pd")]
+position = Vector2(160, 100)
+
+[node name="ReagentAcid" parent="Props" instance=ExtResource("5_ra")]
+position = Vector2(60, 120)
+
+[node name="ReagentBase" parent="Props" instance=ExtResource("6_rb")]
+position = Vector2(85, 120)
+
+[node name="ReagentSaline" parent="Props" instance=ExtResource("7_rs")]
+position = Vector2(110, 120)
+
+[node name="ReagentOrganicSolvent" parent="Props" instance=ExtResource("8_ro")]
+position = Vector2(135, 120)
+
+[node name="MixingStation" parent="Props" instance=ExtResource("9_ms")]
+position = Vector2(240, 110)
+
+[node name="Spectrometer" parent="Props" instance=ExtResource("10_sp")]
+position = Vector2(280, 90)
+
+[node name="ChemSupplySlot" parent="Props" instance=ExtResource("11_cs")]
+position = Vector2(200, 140)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

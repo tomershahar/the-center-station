@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://chlr000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/chemistry_lab/room_chemistry_lab_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "ChemistryLab"
+script = ExtResource("1_a1hly")
+script_name = "ChemistryLab"
+scene = "res://game/rooms/chemistry_lab/room_chemistry_lab.tscn"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://chlp00000000q"]
+
+[ext_resource type="Script" path="res://game/rooms/chemistry_lab/props/chem_supply_slot/prop_chem_supply_slot.gd" id="1"]
+
+[node name="ChemSupplySlot" type="Area2D"]
+script = ExtResource("1")
+script_name = "ChemSupplySlot"
+description = "Chemical Supply Slot"
+interaction_polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

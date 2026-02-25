@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://chlp00000000o"]
+
+[ext_resource type="Script" path="res://game/rooms/chemistry_lab/props/spectrometer/prop_spectrometer_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "Spectrometer"
+script = ExtResource("1_bst")
+script_name = "Spectrometer"
+scene = "res://game/rooms/chemistry_lab/props/spectrometer/prop_spectrometer.tscn"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://chlp00000000r"]
+
+[ext_resource type="Script" path="res://game/rooms/chemistry_lab/props/chem_supply_slot/prop_chem_supply_slot_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ChemSupplySlot"
+script = ExtResource("1_bst")
+script_name = "ChemSupplySlot"
+scene = "res://game/rooms/chemistry_lab/props/chem_supply_slot/prop_chem_supply_slot.tscn"

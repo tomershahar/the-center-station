@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://chlp00000000i"]
+
+[ext_resource type="Script" path="res://game/rooms/chemistry_lab/props/reagent_organic_solvent/prop_reagent_organic_solvent_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ReagentOrganicSolvent"
+script = ExtResource("1_bst")
+script_name = "ReagentOrganicSolvent"
+scene = "res://game/rooms/chemistry_lab/props/reagent_organic_solvent/prop_reagent_organic_solvent.tscn"
