@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hst0000000005"]
+
+[ext_resource type="Script" path="res://game/rooms/main_corridor/hotspots/to_aria_terminal/hotspot_to_aria_terminal.gd" id="1"]
+
+[node name="ToARIATerminal" type="Area2D"]
+script = ExtResource("1")
+script_name = "ToARIATerminal"
+description = "ARIA Terminal"
+interaction_polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)

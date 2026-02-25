@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://prp000000000c"]
+
+[ext_resource type="Script" path="res://game/rooms/aria_terminal/props/aria_light/prop_aria_light_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ARIALight"
+script = ExtResource("1_bst")
+script_name = "ARIALight"
+scene = "res://game/rooms/aria_terminal/props/aria_light/prop_aria_light.tscn"

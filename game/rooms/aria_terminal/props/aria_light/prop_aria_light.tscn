@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp000000000b"]
+
+[ext_resource type="Script" path="res://game/rooms/aria_terminal/props/aria_light/prop_aria_light.gd" id="1"]
+
+[node name="ARIALight" type="Area2D"]
+script = ExtResource("1")
+script_name = "ARIALight"
+description = "ARIA Indicator Light"
+interaction_polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

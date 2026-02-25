@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://hst000000000f"]
+
+[ext_resource type="Script" path="res://game/rooms/main_corridor/hotspots/to_physics_lab/hotspot_to_physics_lab_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ToPhysicsLab"
+script = ExtResource("1_bst")
+script_name = "ToPhysicsLab"
+scene = "res://game/rooms/main_corridor/hotspots/to_physics_lab/hotspot_to_physics_lab.tscn"

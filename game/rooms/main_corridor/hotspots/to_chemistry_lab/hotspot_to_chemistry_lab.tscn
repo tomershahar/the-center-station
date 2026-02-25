@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hst000000000b"]
+
+[ext_resource type="Script" path="res://game/rooms/main_corridor/hotspots/to_chemistry_lab/hotspot_to_chemistry_lab.gd" id="1"]
+
+[node name="ToChemistryLab" type="Area2D"]
+script = ExtResource("1")
+script_name = "ToChemistryLab"
+description = "Chemistry Lab"
+interaction_polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)

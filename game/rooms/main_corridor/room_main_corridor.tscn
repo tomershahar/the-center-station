@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://mco0000000002"]
+
+[ext_resource type="Script" uid="uid://mco0000000001" path="res://game/rooms/main_corridor/room_main_corridor.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://hst0000000002" path="res://game/rooms/main_corridor/hotspots/to_nathes_quarters/hotspot_to_nathes_quarters.tscn" id="2_nq"]
+[ext_resource type="PackedScene" uid="uid://hst0000000005" path="res://game/rooms/main_corridor/hotspots/to_aria_terminal/hotspot_to_aria_terminal.tscn" id="3_at"]
+[ext_resource type="PackedScene" uid="uid://hst0000000008" path="res://game/rooms/main_corridor/hotspots/to_common_area/hotspot_to_common_area.tscn" id="4_ca"]
+[ext_resource type="PackedScene" uid="uid://hst000000000b" path="res://game/rooms/main_corridor/hotspots/to_chemistry_lab/hotspot_to_chemistry_lab.tscn" id="5_cl"]
+[ext_resource type="PackedScene" uid="uid://hst000000000e" path="res://game/rooms/main_corridor/hotspots/to_physics_lab/hotspot_to_physics_lab.tscn" id="6_pl"]
+[ext_resource type="PackedScene" uid="uid://hst000000000h" path="res://game/rooms/main_corridor/hotspots/to_biology_lab/hotspot_to_biology_lab.tscn" id="7_bl"]
+[ext_resource type="PackedScene" uid="uid://hst000000000k" path="res://game/rooms/main_corridor/hotspots/to_computer_core/hotspot_to_computer_core.tscn" id="8_cc"]
+[ext_resource type="PackedScene" uid="uid://hst000000000n" path="res://game/rooms/main_corridor/hotspots/to_observation_deck/hotspot_to_observation_deck.tscn" id="9_od"]
+[ext_resource type="PackedScene" uid="uid://prp0000000002" path="res://game/rooms/main_corridor/props/maintenance_panel/prop_maintenance_panel.tscn" id="10_mp"]
+[ext_resource type="PackedScene" uid="uid://prp0000000005" path="res://game/rooms/main_corridor/props/corridor_intercom/prop_corridor_intercom.tscn" id="11_ci"]
+
+[node name="RoomMainCorridor" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "MainCorridor"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="MaintenancePanel" parent="Props" instance=ExtResource("10_mp")]
+position = Vector2(240, 90)
+
+[node name="CorridorIntercom" parent="Props" instance=ExtResource("11_ci")]
+position = Vector2(160, 40)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToNathesQuarters" parent="Hotspots" instance=ExtResource("2_nq")]
+position = Vector2(20, 140)
+
+[node name="ToARIATerminal" parent="Hotspots" instance=ExtResource("3_at")]
+position = Vector2(300, 140)
+
+[node name="ToCommonArea" parent="Hotspots" instance=ExtResource("4_ca")]
+position = Vector2(160, 140)
+
+[node name="ToChemistryLab" parent="Hotspots" instance=ExtResource("5_cl")]
+position = Vector2(60, 60)
+
+[node name="ToPhysicsLab" parent="Hotspots" instance=ExtResource("6_pl")]
+position = Vector2(100, 60)
+
+[node name="ToBiologyLab" parent="Hotspots" instance=ExtResource("7_bl")]
+position = Vector2(200, 60)
+
+[node name="ToComputerCore" parent="Hotspots" instance=ExtResource("8_cc")]
+position = Vector2(240, 60)
+
+[node name="ToObservationDeck" parent="Hotspots" instance=ExtResource("9_od")]
+position = Vector2(300, 40)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

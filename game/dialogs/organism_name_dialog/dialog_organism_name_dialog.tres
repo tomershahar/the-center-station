@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dlg0000000002"]
+
+[ext_resource type="Script" uid="uid://dlg0000000001" path="res://game/dialogs/organism_name_dialog/dialog_organism_name_dialog.gd" id="1_dlg"]
+[ext_resource type="Script" uid="uid://cmmk3s6vgklri" path="res://addons/Popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="2_opt"]
+
+[sub_resource type="Resource" id="1_alpha7"]
+resource_name = "alpha7"
+script = ExtResource("2_opt")
+id = "alpha7"
+text = "Subject Alpha-7"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id="2_gerald"]
+resource_name = "gerald"
+script = ExtResource("2_opt")
+id = "gerald"
+text = "Gerald"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id="3_space"]
+resource_name = "space"
+script = ExtResource("2_opt")
+id = "space"
+text = "S.P.A.C.E. — Special Pathogenic Alien Cellular Entity"
+visible = true
+disabled = false
+always_on = false
+
+[resource]
+resource_name = "OrganismNameDialog"
+script = ExtResource("1_dlg")
+script_name = "OrganismNameDialog"
+options = [SubResource("1_alpha7"), SubResource("2_gerald"), SubResource("3_space")]

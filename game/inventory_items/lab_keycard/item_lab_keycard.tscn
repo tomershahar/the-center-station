@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://inv0000000002"]
+
+[ext_resource type="Script" uid="uid://inv0000000001" path="res://game/inventory_items/lab_keycard/item_lab_keycard.gd" id="1"]
+
+[node name="LabKeycard" type="TextureRect"]
+mouse_filter = 0
+size_flags_vertical = 4
+script = ExtResource("1")
+script_name = "LabKeycard"
+description = "Lab Keycard"
+cursor = 10

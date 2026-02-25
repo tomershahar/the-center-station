@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://prp0000000002"]
+
+[ext_resource type="Script" path="res://game/rooms/main_corridor/props/maintenance_panel/prop_maintenance_panel.gd" id="1"]
+
+[node name="MaintenancePanel" type="Area2D"]
+script = ExtResource("1")
+script_name = "MaintenancePanel"
+description = "Maintenance Panel"
+interaction_polygon = PackedVector2Array(-18, -14, 18, -14, 18, 14, -18, 14)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-18, -14, 18, -14, 18, 14, -18, 14)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
