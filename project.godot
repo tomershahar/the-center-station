@@ -61,6 +61,10 @@ popochiu-skip={
 
 3d/physics_engine="Jolt Physics"
 
+[popochiu]
+
+dev/use_addon_template=true
+
 [rendering]
 
 rendering_device/driver.windows="d3d12"
