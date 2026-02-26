@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bi5vhqckemdqa" path="res://game/rooms/nathes_quarters/props/door_panel/prop_door_panel.tscn" id="7_panel"]
 [ext_resource type="PackedScene" uid="uid://dk7w8semgnnsc" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.tscn" id="8_door"]
 [ext_resource type="PackedScene" uid="uid://nqpf000001" path="res://game/rooms/nathes_quarters/props/photo_frame/prop_photo_frame.tscn" id="9_pf"]
-
 [ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[ext_resource type="Script" uid="uid://uvtywyf3pq1a" path="res://addons/popochiu/engine/objects/walkable_area/popochiu_walkable_area.gd" id="wa_gd"]
+
+[sub_resource type="NavigationPolygon" id="NavPoly_wa"]
+
 [node name="RoomNathesQuarters" type="Node2D" unique_id=415263796]
 script = ExtResource("1_swk5r")
 script_name = "NathesQuarters"
@@ -18,17 +21,29 @@ width = 320
 height = 180
 popochiu_placeholder = null
 
-
-[node name="Background" type="ColorRect" parent="."]
-color = Color(0.06, 0.06, 0.12, 1)
-size = Vector2(320, 180)
+[node name="Background" type="ColorRect" parent="." unique_id=640561692]
 z_index = -1
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.06, 0.06, 0.12, 1)
 
-[node name="RoomLabel" type="Label" parent="."]
-position = Vector2(4, 2)
+[node name="RoomLabel" type="Label" parent="." unique_id=1067972587]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 4.0
+offset_bottom = 2.0
 text = "Nathe's Quarters"
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=315562916]
+
+[node name="Floor" type="Node2D" parent="WalkableAreas"]
+script = ExtResource("wa_gd")
+script_name = "Floor"
+interaction_polygon = [PackedVector2Array(0, 72, 320, 72, 320, 178, 0, 178)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="WalkableAreas/Floor"]
+visible = false
+navigation_polygon = SubResource("NavPoly_wa")
 
 [node name="Props" type="Node2D" parent="." unique_id=1430982212]
 
@@ -50,7 +65,7 @@ position = Vector2(288, 118)
 [node name="DoorPanel" parent="Props" unique_id=901199181 instance=ExtResource("7_panel")]
 position = Vector2(305, 82)
 
-[node name="PhotoFrame" parent="Props" instance=ExtResource("9_pf")]
+[node name="PhotoFrame" parent="Props" unique_id=301208845 instance=ExtResource("9_pf")]
 position = Vector2(196, 72)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=314633549]
@@ -64,5 +79,6 @@ position = Vector2(314, 90)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1599573053]
 
-[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+[node name="CharacterRoger *" parent="Characters" unique_id=1961532927 instance=ExtResource("roger_char")]
 position = Vector2(160, 90)
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)

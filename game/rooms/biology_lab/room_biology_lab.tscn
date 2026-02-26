@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://blp00000000e" path="res://game/rooms/biology_lab/props/greenhouse_log/prop_greenhouse_log.tscn" id="7_gl"]
 
 [ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[ext_resource type="Script" uid="uid://uvtywyf3pq1a" path="res://addons/popochiu/engine/objects/walkable_area/popochiu_walkable_area.gd" id="wa_gd"]
+
+[sub_resource type="NavigationPolygon" id="NavPoly_wa"]
+
 [node name="RoomBiologyLab" type="Node2D"]
 script = ExtResource("1_room")
 script_name = "BiologyLab"
@@ -27,6 +31,15 @@ position = Vector2(4, 2)
 text = "Biology Lab"
 
 [node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Floor" type="Node2D" parent="WalkableAreas"]
+script = ExtResource("wa_gd")
+script_name = "Floor"
+interaction_polygon = [PackedVector2Array(0, 72, 320, 72, 320, 178, 0, 178)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="WalkableAreas/Floor"]
+visible = false
+navigation_polygon = SubResource("NavPoly_wa")
 
 [node name="Props" type="Node2D" parent="."]
 
