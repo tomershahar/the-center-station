@@ -4,7 +4,6 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.social_complete:
 		await C.Nathe.say("The comms array is still receiving signals from both factions. B and C holding their coalition. A still pulsing its objections.")
@@ -14,22 +13,19 @@ func _on_click() -> void:
 		await C.Nathe.say("The comms array is here, but I'd need the portable frequency broadcaster to tune it to the faction frequencies. The one from Storage.")
 		return
 
-	var talked_to_c: bool = room.get_meta("talked_to_c", false)
-	var talked_to_b: bool = room.get_meta("talked_to_b", false)
-
-	if not talked_to_c:
-		await _first_contact(room)
-	elif not talked_to_b:
-		await _talk_to_b(room)
+	if not Globals.od_talked_to_c:
+		await _first_contact()
+	elif not Globals.od_talked_to_b:
+		await _talk_to_b()
 	else:
-		await _propose_coalition(room)
+		await _propose_coalition()
 
 
 func _on_right_click() -> void:
 	await C.Nathe.say("Roger's modified comms array. Tuned to broadcast on all three faction frequencies simultaneously.")
 
 
-func _first_contact(room: Node) -> void:
+func _first_contact() -> void:
 	await C.Nathe.say("All four data sets logged. Chemistry, Physics, Biology, Math. I know what each faction wants and why.")
 	await C.Roger.say("Connecting the portable broadcaster to the array. Broadcasting on all three faction frequencies.")
 	await E.wait(0.5)
@@ -55,10 +51,10 @@ func _first_contact(room: Node) -> void:
 	await E.wait(0.5)
 	await C.Nathe.say("C wants to leave but A is sitting on the only exit. C needs someone to push A back from the airlock before they can go anywhere.")
 	await C.Nathe.say("Which means C needs an ally. Someone with an independent reason to suppress A.")
-	room.set_meta("talked_to_c", true)
+	Globals.od_talked_to_c = true
 
 
-func _talk_to_b(room: Node) -> void:
+func _talk_to_b() -> void:
 	await C.Nathe.say("Opening the Faction B frequency.")
 	await E.wait(0.3)
 	await C.Nathe.say("Faction B is responding. Cautious. They're analyzing the transmission.")
@@ -72,10 +68,10 @@ func _talk_to_b(room: Node) -> void:
 	await C.Nathe.say("They watched every experiment I ran. They corrected my data. They know I don't guess.")
 	await C.Roger.say("...That landed. They're still listening.")
 	await C.Nathe.say("Good. I have a proposal — but I need both B and C in the room for it.")
-	room.set_meta("talked_to_b", true)
+	Globals.od_talked_to_b = true
 
 
-func _propose_coalition(room: Node) -> void:
+func _propose_coalition() -> void:
 	await C.Nathe.say("Here's the deal.")
 	await C.Nathe.say("Faction C wants to leave the station — but can't reach the airlock because A is blocking Section 7.")
 	await C.Nathe.say("Faction B wants A's dominance reduced — because that's the only path to the balance you want.")
