@@ -54,6 +54,37 @@ var department_credentials_obtained: bool = false  # From Storage Bay, used for 
 var chem_kit_installed: bool = false               # ChemicalSupplyKit used in Chemistry Lab slot
 var dish2_wired: bool = false                      # Dish 2 junction wired in Main Corridor (for Physics Lab puzzle)
 
+# === MID-PUZZLE PROGRESS (migrated from node meta for save/load persistence) ===
+
+# Biology Lab zone states
+var bio_zone1_seen: bool = false
+var bio_zone2_seen: bool = false
+var bio_zone3_seen: bool = false
+var bio_zone1_stressed: bool = false
+var bio_zone1_stressed_seen: bool = false
+var bio_zone2_comforted: bool = false
+
+# Computer Core decode state
+var cc_research_log_read: bool = false
+var cc_monitor_a_decoded: bool = false
+var cc_monitor_b_decoded: bool = false
+var cc_monitor_c_decoded: bool = false
+
+# Observation Deck negotiation state
+var od_talked_to_c: bool = false
+var od_talked_to_b: bool = false
+
+# Organism Nexus step state
+var nexus_step1_done: bool = false
+var nexus_step2_done: bool = false
+var nexus_step3_done: bool = false
+
+# Easter egg discovery flags
+var ee_photo_seen: bool = false
+var ee_logs_read: bool = false
+var ee_arcade_visited: bool = false
+var ee_organism_revealed: bool = false
+
 # === PLAYER-CHOSEN STRINGS ===
 var department_name: String = ""  # Player's fake department name (set in Storage Bay)
 
