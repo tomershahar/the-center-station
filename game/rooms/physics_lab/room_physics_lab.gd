@@ -13,6 +13,7 @@ func _on_room_entered() -> void:
 	# Restore persistent cross-room state
 	if Globals.dish2_wired:
 		_dish2_aligned = true
+	_update_organism_spread()
 	await _organism_observation()
 	await C.Roger.setup_room_hints(_get_hints())
 	if Globals.physics_complete:
@@ -33,6 +34,21 @@ func _complete_puzzle() -> void:
 	Globals.physics_complete = true
 	C.Roger.stop_hints()
 	Globals.check_observation_unlock()
+
+
+func _update_organism_spread() -> void:
+	var existing = get_node_or_null("OrganismGrowthOverlay")
+	if existing:
+		existing.queue_free()
+	if not Globals.physics_complete:
+		return
+	var overlay := ColorRect.new()
+	overlay.name = "OrganismGrowthOverlay"
+	overlay.color = Color(0.0, 0.4, 0.0, 0.25)
+	overlay.size = Vector2(320, 180)
+	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	overlay.z_index = -1
+	add_child(overlay)
 
 
 func _organism_observation() -> void:

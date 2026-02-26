@@ -18,6 +18,7 @@ func _on_room_entered() -> void:
 		# If Continue was chosen, E.load_game navigated away — this
 		# coroutine was already abandoned before reaching here.
 
+	_update_organism_spread()
 	if not Globals.opening_played:
 		await _run_opening_sequence()
 	else:
@@ -97,6 +98,21 @@ func _run_opening_sequence() -> void:
 	await C.Nathe.say("And it's locked. Great start to the morning.")
 
 	await C.Roger.setup_room_hints(_get_tutorial_hints())
+
+
+func _update_organism_spread() -> void:
+	var existing = get_node_or_null("OrganismGrowthOverlay")
+	if existing:
+		existing.queue_free()
+	if not Globals.biology_complete:
+		return
+	var overlay := ColorRect.new()
+	overlay.name = "OrganismGrowthOverlay"
+	overlay.color = Color(0.0, 0.4, 0.0, 0.25)
+	overlay.size = Vector2(320, 180)
+	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	overlay.z_index = -1
+	add_child(overlay)
 
 
 func _get_tutorial_hints() -> Dictionary:
