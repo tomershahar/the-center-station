@@ -3,16 +3,13 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.chemistry_complete:
 		await C.Nathe.say("The spectrometer already confirmed it — two distinct cell types. Results are in the research log.")
 		return
 
-	var sample_treated: bool = room.get_meta("sample_treated", false)
-
-	if not sample_treated:
-		if room.get_meta("formula_ready", false):
+	if not Globals.chem_sample_treated:
+		if Globals.chem_formula_ready:
 			await C.Nathe.say("I need to apply the formula to the sample before running the spectrometer.")
 		else:
 			await C.Nathe.say("The spectrometer won't tell me much with an unprepared sample. The two-layer structure would just create interference.")

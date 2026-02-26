@@ -3,36 +3,31 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.chemistry_complete:
 		await C.Nathe.say("The mixing station where I synthesized the two-stage formula. The formula's been logged.")
 		return
 
-	if room.get_meta("formula_ready", false):
+	if Globals.chem_formula_ready:
 		await C.Nathe.say("The two-stage formula is ready. I should apply it to the petri dish sample.")
 		return
 
-	var kit_installed: bool = Globals.chem_kit_installed
-	var solvent_tested: bool = room.get_meta("solvent_tested", false)
-	var base_tested: bool = room.get_meta("base_tested", false)
-
-	if not kit_installed:
+	if not Globals.chem_kit_installed:
 		if I.is_item_in_inventory("ChemicalSupplyKit"):
 			await C.Nathe.say("I need proper mixing apparatus before I can synthesize anything. I should install that supply kit first.")
 		else:
 			await C.Nathe.say("I'd need proper mixing apparatus to synthesize anything here. The standard lab setup isn't equipped for this.")
 		return
 
-	if not solvent_tested:
+	if not Globals.chem_solvent_tested:
 		await C.Nathe.say("I haven't finished testing the reagents yet. I should understand what works on each layer before combining anything.")
 		return
 
-	if not base_tested:
+	if not Globals.chem_base_tested:
 		await C.Nathe.say("The organic solvent handles the outer layer — but I haven't worked out the inner core solution yet.")
 		return
 
-	room.set_meta("formula_ready", true)
+	Globals.chem_formula_ready = true
 	await C.Nathe.say("Organic solvent for the lipid layer, base compound for the mineral core. Ratio 3:1.")
 	await C.Nathe.say("A two-stage approach — each reagent targets one layer. Sequential application.")
 	await C.Roger.say("You're not keeping any of the compound?")

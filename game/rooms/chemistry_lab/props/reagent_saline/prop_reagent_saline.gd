@@ -3,17 +3,16 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.chemistry_complete:
 		await C.Nathe.say("The saline did absolutely nothing. Good control test.")
 		return
 
-	if room.get_meta("saline_tested", false):
+	if Globals.chem_saline_tested:
 		await C.Nathe.say("Saline. Completely inert against the sample.")
 		return
 
-	room.set_meta("saline_tested", true)
+	Globals.chem_saline_tested = true
 	await C.Nathe.say("Standard saline solution. Good for a control test...")
 	await C.Nathe.say("Nothing. Absolutely nothing.")
 	await C.Roger.say("Noted.")
