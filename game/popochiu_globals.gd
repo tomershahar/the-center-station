@@ -85,6 +85,26 @@ var ee_logs_read: bool = false
 var ee_arcade_visited: bool = false
 var ee_organism_revealed: bool = false
 
+# Chemistry Lab mid-puzzle state
+var chem_acid_tested: bool = false
+var chem_saline_tested: bool = false
+var chem_solvent_tested: bool = false
+var chem_base_tested: bool = false
+var chem_formula_ready: bool = false
+var chem_sample_treated: bool = false
+
+# Storage Bay mid-puzzle state
+var storage_budget_code_found: bool = false
+var storage_ready_to_sign: bool = false
+var storage_terminal_stage: int = 0
+
+# Observation Deck window state
+var od_window_observed: bool = false
+
+# Biology Lab lore reads
+var bio_log_read: bool = false
+var bio_textbook_read: bool = false
+
 # === PLAYER-CHOSEN STRINGS ===
 var department_name: String = ""  # Player's fake department name (set in Storage Bay)
 
