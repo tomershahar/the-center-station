@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccp00000000e"]
+
+[ext_resource type="Script" path="res://game/rooms/computer_core/props/server_reboot/prop_server_reboot.gd" id="1"]
+
+[node name="ServerReboot" type="Area2D"]
+script = ExtResource("1")
+script_name = "ServerReboot"
+description = "Server Reboot"
+interaction_polygon = PackedVector2Array(-16, -12, 16, -12, 16, 12, -16, 12)
+
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-16, -12, 16, -12, 16, 12, -16, 12)
+color = Color(0.7, 0.5, 0.1, 0.9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-16, -12, 16, -12, 16, 12, -16, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

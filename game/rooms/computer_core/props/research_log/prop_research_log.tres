@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ccp00000000c"]
+
+[ext_resource type="Script" path="res://game/rooms/computer_core/props/research_log/prop_research_log_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ResearchLog"
+script = ExtResource("1_bst")
+script_name = "ResearchLog"
+scene = "res://game/rooms/computer_core/props/research_log/prop_research_log.tscn"

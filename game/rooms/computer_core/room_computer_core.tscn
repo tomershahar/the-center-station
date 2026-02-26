@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ccr000000002"]
+
+[ext_resource type="Script" uid="uid://ccr000000001" path="res://game/rooms/computer_core/room_computer_core.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://cch000000002" path="res://game/rooms/computer_core/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
+[ext_resource type="PackedScene" uid="uid://ccp000000002" path="res://game/rooms/computer_core/props/monitor_a/prop_monitor_a.tscn" id="3_ma"]
+[ext_resource type="PackedScene" uid="uid://ccp000000005" path="res://game/rooms/computer_core/props/monitor_b/prop_monitor_b.tscn" id="4_mb"]
+[ext_resource type="PackedScene" uid="uid://ccp000000008" path="res://game/rooms/computer_core/props/monitor_c/prop_monitor_c.tscn" id="5_mc"]
+[ext_resource type="PackedScene" uid="uid://ccp00000000b" path="res://game/rooms/computer_core/props/research_log/prop_research_log.tscn" id="6_rl"]
+[ext_resource type="PackedScene" uid="uid://ccp00000000e" path="res://game/rooms/computer_core/props/server_reboot/prop_server_reboot.tscn" id="7_sr"]
+
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[node name="RoomComputerCore" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "ComputerCore"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.06, 0.06, 0.14, 1)
+size = Vector2(320, 180)
+z_index = -1
+
+[node name="RoomLabel" type="Label" parent="."]
+position = Vector2(4, 2)
+text = "Computer Core"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="MonitorA" parent="Props" instance=ExtResource("3_ma")]
+position = Vector2(70, 80)
+
+[node name="MonitorB" parent="Props" instance=ExtResource("4_mb")]
+position = Vector2(160, 80)
+
+[node name="MonitorC" parent="Props" instance=ExtResource("5_mc")]
+position = Vector2(250, 80)
+
+[node name="ResearchLog" parent="Props" instance=ExtResource("6_rl")]
+position = Vector2(260, 140)
+
+[node name="ServerReboot" parent="Props" instance=ExtResource("7_sr")]
+position = Vector2(60, 140)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 120)

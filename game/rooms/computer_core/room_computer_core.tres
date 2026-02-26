@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ccr000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/computer_core/room_computer_core_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "ComputerCore"
+script = ExtResource("1_a1hly")
+script_name = "ComputerCore"
+scene = "res://game/rooms/computer_core/room_computer_core.tscn"

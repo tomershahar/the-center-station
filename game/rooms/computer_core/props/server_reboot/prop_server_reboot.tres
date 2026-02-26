@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ccp00000000f"]
+
+[ext_resource type="Script" path="res://game/rooms/computer_core/props/server_reboot/prop_server_reboot_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ServerReboot"
+script = ExtResource("1_bst")
+script_name = "ServerReboot"
+scene = "res://game/rooms/computer_core/props/server_reboot/prop_server_reboot.tscn"

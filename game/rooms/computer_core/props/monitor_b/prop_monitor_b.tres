@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://ccp000000006"]
+
+[ext_resource type="Script" path="res://game/rooms/computer_core/props/monitor_b/prop_monitor_b_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "MonitorB"
+script = ExtResource("1_bst")
+script_name = "MonitorB"
+scene = "res://game/rooms/computer_core/props/monitor_b/prop_monitor_b.tscn"
