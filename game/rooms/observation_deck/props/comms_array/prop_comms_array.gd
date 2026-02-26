@@ -28,6 +28,7 @@ func _on_right_click() -> void:
 func _first_contact() -> void:
 	await C.Nathe.say("All four data sets logged. Chemistry, Physics, Biology, Math. I know what each faction wants and why.")
 	await C.Roger.say("Connecting the portable broadcaster to the array. Broadcasting on all three faction frequencies.")
+	await I.remove_item("FrequencyBroadcaster")
 	await E.wait(0.5)
 	await C.Nathe.say("The observation windows — the organism's reacting. The patterns are changing.")
 	await C.Roger.say("Receiving responses on all three channels simultaneously.")

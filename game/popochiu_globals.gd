@@ -128,4 +128,4 @@ func check_observation_unlock() -> void:
 	if all_components_complete() and not observation_unlocked:
 		observation_unlocked = true
 		act = 3
-		print("[Globals] Observation Deck unlocked. Act 3 begins.")
+		await ARIA.say("Research data compilation threshold met. Observation Deck communications array: available.")
