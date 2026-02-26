@@ -105,6 +105,13 @@ var od_window_observed: bool = false
 var bio_log_read: bool = false
 var bio_textbook_read: bool = false
 
+# Organism spread observations — stores last act at which the observation fired (0 = never)
+var growth_noted_corridor: int = 0
+var growth_noted_common_area: int = 0
+var growth_noted_storage: int = 0
+var growth_noted_physics: int = 0
+var growth_noted_obs_deck: int = 0
+
 # === PLAYER-CHOSEN STRINGS ===
 var department_name: String = ""  # Player's fake department name (set in Storage Bay)
 

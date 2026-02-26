@@ -3,7 +3,20 @@ extends PopochiuRoom
 
 func _on_room_entered() -> void:
 	_update_door_states()
+	await _organism_observation()
 	await C.Roger.setup_room_hints(_get_hints())
+
+
+func _organism_observation() -> void:
+	if Globals.act <= Globals.growth_noted_corridor:
+		return
+	Globals.growth_noted_corridor = Globals.act
+	match Globals.act:
+		2:
+			await C.Nathe.say("Patches of growth on the corridor walls. Pale green-grey. The organism is expanding out from the Biology sector.")
+		3:
+			await C.Nathe.say("The growth has spread to most of the corridor now. It's faintly pulsing. The station looks like it's breathing.")
+			await C.Roger.say("Atmospheric.")
 
 
 func _update_door_states() -> void:

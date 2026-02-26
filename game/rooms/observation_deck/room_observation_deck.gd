@@ -2,7 +2,17 @@ extends PopochiuRoom
 
 
 func _on_room_entered() -> void:
+	await _organism_observation()
 	await C.Roger.setup_room_hints(_get_hints())
+
+
+func _organism_observation() -> void:
+	if Globals.act <= Globals.growth_noted_obs_deck:
+		return
+	Globals.growth_noted_obs_deck = Globals.act
+	match Globals.act:
+		3:
+			await C.Nathe.say("Organism tendrils along the edges of the observation glass. From here I can see how far the spread has gotten across the station.")
 
 
 func _get_hints() -> Dictionary:

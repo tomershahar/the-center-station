@@ -13,6 +13,7 @@ func _on_room_entered() -> void:
 	# Restore persistent cross-room state
 	if Globals.dish2_wired:
 		_dish2_aligned = true
+	await _organism_observation()
 	await C.Roger.setup_room_hints(_get_hints())
 	if Globals.physics_complete:
 		await C.Nathe.say("The frequency analyzer is still showing three clean signals. Three factions, three frequencies.")
@@ -32,6 +33,18 @@ func _complete_puzzle() -> void:
 	Globals.physics_complete = true
 	C.Roger.stop_hints()
 	Globals.check_observation_unlock()
+
+
+func _organism_observation() -> void:
+	if Globals.act <= Globals.growth_noted_physics:
+		return
+	Globals.growth_noted_physics = Globals.act
+	match Globals.act:
+		2:
+			await C.Nathe.say("Green patches on the equipment, near the antenna arrays. The organism seems drawn to the frequency emitters.")
+		3:
+			await C.Nathe.say("The growth is pulsing in sync with the signal frequencies. It's actively responding to the equipment.")
+			await C.Roger.say("It's listening.")
 
 
 func _get_hints() -> Dictionary:
