@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://blr000000002"]
+
+[ext_resource type="Script" uid="uid://blr000000001" path="res://game/rooms/biology_lab/room_biology_lab.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://blh000000002" path="res://game/rooms/biology_lab/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
+[ext_resource type="PackedScene" uid="uid://blp000000002" path="res://game/rooms/biology_lab/props/zone1_panel/prop_zone1_panel.tscn" id="3_z1"]
+[ext_resource type="PackedScene" uid="uid://blp000000005" path="res://game/rooms/biology_lab/props/zone2_panel/prop_zone2_panel.tscn" id="4_z2"]
+[ext_resource type="PackedScene" uid="uid://blp000000008" path="res://game/rooms/biology_lab/props/zone3_observation/prop_zone3_observation.tscn" id="5_z3"]
+[ext_resource type="PackedScene" uid="uid://blp00000000b" path="res://game/rooms/biology_lab/props/biology_textbook/prop_biology_textbook.tscn" id="6_bt"]
+[ext_resource type="PackedScene" uid="uid://blp00000000e" path="res://game/rooms/biology_lab/props/greenhouse_log/prop_greenhouse_log.tscn" id="7_gl"]
+
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[node name="RoomBiologyLab" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "BiologyLab"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.04, 0.10, 0.04, 1)
+size = Vector2(320, 180)
+z_index = -1
+
+[node name="RoomLabel" type="Label" parent="."]
+position = Vector2(4, 2)
+text = "Biology Lab"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Zone1Panel" parent="Props" instance=ExtResource("3_z1")]
+position = Vector2(70, 100)
+
+[node name="Zone2Panel" parent="Props" instance=ExtResource("4_z2")]
+position = Vector2(250, 100)
+
+[node name="Zone3Observation" parent="Props" instance=ExtResource("5_z3")]
+position = Vector2(160, 90)
+
+[node name="BiologyTextbook" parent="Props" instance=ExtResource("6_bt")]
+position = Vector2(60, 145)
+
+[node name="GreenhouseLog" parent="Props" instance=ExtResource("7_gl")]
+position = Vector2(100, 145)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 90)

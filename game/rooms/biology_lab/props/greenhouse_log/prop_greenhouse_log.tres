@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blp00000000f"]
+
+[ext_resource type="Script" path="res://game/rooms/biology_lab/props/greenhouse_log/prop_greenhouse_log_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "GreenhouseLog"
+script = ExtResource("1_bst")
+script_name = "GreenhouseLog"
+scene = "res://game/rooms/biology_lab/props/greenhouse_log/prop_greenhouse_log.tscn"

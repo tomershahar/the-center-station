@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blr000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/biology_lab/room_biology_lab_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "BiologyLab"
+script = ExtResource("1_a1hly")
+script_name = "BiologyLab"
+scene = "res://game/rooms/biology_lab/room_biology_lab.tscn"

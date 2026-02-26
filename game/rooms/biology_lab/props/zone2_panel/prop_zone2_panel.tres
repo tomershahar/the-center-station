@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blp000000006"]
+
+[ext_resource type="Script" path="res://game/rooms/biology_lab/props/zone2_panel/prop_zone2_panel_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "Zone2Panel"
+script = ExtResource("1_bst")
+script_name = "Zone2Panel"
+scene = "res://game/rooms/biology_lab/props/zone2_panel/prop_zone2_panel.tscn"

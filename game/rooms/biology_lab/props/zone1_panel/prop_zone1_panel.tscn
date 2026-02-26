@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://blp000000002"]
+
+[ext_resource type="Script" path="res://game/rooms/biology_lab/props/zone1_panel/prop_zone1_panel.gd" id="1"]
+
+[node name="Zone1Panel" type="Area2D"]
+script = ExtResource("1")
+script_name = "Zone1Panel"
+description = "Zone 1 Panel"
+interaction_polygon = PackedVector2Array(-20, -16, 20, -16, 20, 16, -20, 16)
+
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-20, -16, 20, -16, 20, 16, -20, 16)
+color = Color(0.7, 0.5, 0.1, 0.9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-20, -16, 20, -16, 20, 16, -20, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

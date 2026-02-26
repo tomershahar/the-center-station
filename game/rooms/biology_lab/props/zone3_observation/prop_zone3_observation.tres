@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blp000000009"]
+
+[ext_resource type="Script" path="res://game/rooms/biology_lab/props/zone3_observation/prop_zone3_observation_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "Zone3Observation"
+script = ExtResource("1_bst")
+script_name = "Zone3Observation"
+scene = "res://game/rooms/biology_lab/props/zone3_observation/prop_zone3_observation.tscn"
