@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dorje61xtiqgr"]
+
+[ext_resource type="Script" path="res://game/characters/nathe/character_nathe_state.gd" id="1_n3iaa"]
+
+[resource]
+resource_name = "Nathe"
+script = ExtResource("1_n3iaa")
+script_name = "Nathe"
+scene = "res://game/characters/nathe/character_nathe.tscn"

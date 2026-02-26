@@ -8,6 +8,10 @@ script_name = "Dish1Console"
 description = "Dish 1 Console"
 interaction_polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)
 
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)
+color = Color(0.7, 0.5, 0.1, 0.9)
+
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
 modulate = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(-25, -20, 25, -20, 25, 20, -25, 20)

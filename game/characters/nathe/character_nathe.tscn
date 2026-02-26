@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bjy8spvthme63"]
+
+[ext_resource type="Script" path="res://game/characters/nathe/character_nathe.gd" id="1_anr1m"]
+
+[node name="CharacterNathe" type="Area2D" unique_id=245914172]
+script = ExtResource("1_anr1m")
+popochiu_placeholder = null
+script_name = "Nathe"
+description = "Nathe"
+cursor = 8
+interaction_polygon = PackedVector2Array()
+
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-8, -28, 8, -28, 8, 4, -8, 4)
+color = Color(0.2, 0.4, 0.9, 1)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=861234009]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=742148987]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1635330567]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=393483378]

@@ -20,6 +20,16 @@ width = 320
 height = 180
 popochiu_placeholder = null
 
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.08, 0.08, 0.10, 1)
+size = Vector2(320, 180)
+z_index = -1
+
+[node name="RoomLabel" type="Label" parent="."]
+position = Vector2(4, 2)
+text = "Main Corridor"
+
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Props" type="Node2D" parent="."]

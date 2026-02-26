@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://vhq4yiupk3b"]
+
+[ext_resource type="Script" path="res://game/characters/roger/character_roger.gd" id="1_6ukfr"]
+
+[node name="CharacterRoger" type="Area2D" unique_id=264352579]
+script = ExtResource("1_6ukfr")
+popochiu_placeholder = null
+script_name = "Roger"
+description = "Roger"
+cursor = 8
+interaction_polygon = PackedVector2Array()
+
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-8, -28, 8, -28, 8, 4, -8, 4)
+color = Color(0.5, 0.5, 0.5, 1)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=842750292]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=767858305]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=794170459]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1019141101]
