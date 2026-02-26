@@ -3,22 +3,21 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.biology_complete:
 		await C.Nathe.say("Zone 2 organisms have unified. Comfortable conditions maintained. All factions cooperating.")
 		return
 
-	var zone2_seen: bool = room.get_meta("zone2_seen", false)
-	var zone1_stressed_seen: bool = room.get_meta("zone1_stressed_seen", false)
-	var zone2_comforted: bool = room.get_meta("zone2_comforted", false)
+	var zone2_seen: bool = Globals.bio_zone2_seen
+	var zone1_stressed_seen: bool = Globals.bio_zone1_stressed_seen
+	var zone2_comforted: bool = Globals.bio_zone2_comforted
 
 	if zone2_comforted:
 		await C.Nathe.say("Zone 2 organisms — one unified color. Comfortable conditions, unified colony. The reverse of what stress does.")
 		return
 
 	if not zone2_seen:
-		room.set_meta("zone2_seen", true)
+		Globals.bio_zone2_seen = true
 		await C.Nathe.say("Zone 2 environmental panel. Currently: 14°C, minimal lighting, 20% humidity.")
 		await C.Roger.say("Organisms in Zone 2 are sparse. Two distinct color signatures — red and blue clusters. Completely separated.")
 		await C.Nathe.say("Harsh conditions. And the organism has split into factions. I'll note this.")
@@ -32,7 +31,7 @@ func _on_click() -> void:
 	await ARIA.say("Adjusting Zone 2 environment. Note: adjusting greenhouse climate will void Current Crop Insurance Policy. Proceed?")
 	await C.Nathe.say("...Yes, ARIA. Proceed.")
 	await C.Nathe.say("Raising temperature... increasing light... bringing humidity up...")
-	room.set_meta("zone2_comforted", true)
+	Globals.bio_zone2_comforted = true
 	await E.wait(0.8)
 	await C.Roger.say("Zone 2 organisms — the two factions are moving toward each other. The red and blue are blending.")
 	await C.Nathe.say("They're merging. The factions are unifying under comfortable conditions.")
