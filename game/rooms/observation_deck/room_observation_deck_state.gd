@@ -1,4 +1,4 @@
-extends Resource
+extends PopochiuRoomData
 
 
 func _on_save() -> Dictionary:
