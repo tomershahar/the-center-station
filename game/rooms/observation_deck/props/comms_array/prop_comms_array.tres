@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://odp000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/props/comms_array/prop_comms_array_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "CommsArray"
+script = ExtResource("1_bst")
+script_name = "CommsArray"
+scene = "res://game/rooms/observation_deck/props/comms_array/prop_comms_array.tscn"

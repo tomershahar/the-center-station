@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://odp00000000c"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/props/faction_notes/prop_faction_notes_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "FactionNotes"
+script = ExtResource("1_bst")
+script_name = "FactionNotes"
+scene = "res://game/rooms/observation_deck/props/faction_notes/prop_faction_notes.tscn"

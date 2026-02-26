@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://odr000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/room_observation_deck_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "ObservationDeck"
+script = ExtResource("1_a1hly")
+script_name = "ObservationDeck"
+scene = "res://game/rooms/observation_deck/room_observation_deck.tscn"

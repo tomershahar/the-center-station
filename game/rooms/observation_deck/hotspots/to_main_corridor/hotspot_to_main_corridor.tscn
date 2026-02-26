@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://odh000000002"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/hotspots/to_main_corridor/hotspot_to_main_corridor.gd" id="1"]
+
+[node name="ToMainCorridor" type="Area2D"]
+script = ExtResource("1")
+script_name = "ToMainCorridor"
+description = "Main Corridor"
+interaction_polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)

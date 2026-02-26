@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://odr000000002"]
+
+[ext_resource type="Script" uid="uid://odr000000001" path="res://game/rooms/observation_deck/room_observation_deck.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://odh000000002" path="res://game/rooms/observation_deck/hotspots/to_main_corridor/hotspot_to_main_corridor.tscn" id="2_mc"]
+[ext_resource type="PackedScene" uid="uid://odp000000002" path="res://game/rooms/observation_deck/props/comms_array/prop_comms_array.tscn" id="3_ca"]
+[ext_resource type="PackedScene" uid="uid://odp000000005" path="res://game/rooms/observation_deck/props/observation_window/prop_observation_window.tscn" id="4_ow"]
+[ext_resource type="PackedScene" uid="uid://odp000000008" path="res://game/rooms/observation_deck/props/station_schematics/prop_station_schematics.tscn" id="5_ss"]
+[ext_resource type="PackedScene" uid="uid://odp00000000b" path="res://game/rooms/observation_deck/props/faction_notes/prop_faction_notes.tscn" id="6_fn"]
+
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[node name="RoomObservationDeck" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "ObservationDeck"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.06, 0.08, 0.14, 1)
+size = Vector2(320, 180)
+z_index = -1
+
+[node name="RoomLabel" type="Label" parent="."]
+position = Vector2(4, 2)
+text = "Observation Deck"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="ObservationWindow" parent="Props" instance=ExtResource("4_ow")]
+position = Vector2(160, 50)
+
+[node name="CommsArray" parent="Props" instance=ExtResource("3_ca")]
+position = Vector2(240, 120)
+
+[node name="StationSchematics" parent="Props" instance=ExtResource("5_ss")]
+position = Vector2(60, 120)
+
+[node name="FactionNotes" parent="Props" instance=ExtResource("6_fn")]
+position = Vector2(110, 145)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 120)
