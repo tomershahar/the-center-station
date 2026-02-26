@@ -3,10 +3,9 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
-	if not room.get_meta("log_read", false):
-		room.set_meta("log_read", true)
+	if not Globals.bio_log_read:
+		Globals.bio_log_read = true
 
 	await C.Nathe.say("Research log. Pre-containment protocol.")
 	await E.wait(0.3)

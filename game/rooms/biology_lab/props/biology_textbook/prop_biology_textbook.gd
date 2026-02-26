@@ -3,10 +3,9 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
-	if not room.get_meta("textbook_read", false):
-		room.set_meta("textbook_read", true)
+	if not Globals.bio_textbook_read:
+		Globals.bio_textbook_read = true
 
 	await C.Nathe.say("'Xenobiological Adaptation Theory, Third Edition.' Let me check the relevant chapter...")
 	await E.wait(0.5)
