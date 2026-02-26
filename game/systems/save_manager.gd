@@ -4,6 +4,10 @@ extends Node
 
 const SLOT := 1
 
+# Session-only — NOT in Globals so it isn't overwritten by save/load.
+# Set to true once the title screen is dismissed this session.
+var title_shown: bool = false
+
 
 func _ready() -> void:
 	set_process_unhandled_input(true)

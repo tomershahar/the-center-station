@@ -7,6 +7,17 @@ var state: Data = load("res://game/rooms/nathes_quarters/room_nathes_quarters.tr
 
 
 func _on_room_entered() -> void:
+	if not SaveManager.title_shown:
+		SaveManager.title_shown = true
+		var cl := CanvasLayer.new()
+		cl.layer = 100
+		get_tree().root.add_child(cl)
+		var title := preload("res://game/title_screen/title_screen.tscn").instantiate()
+		cl.add_child(title)
+		await title.done
+		# If Continue was chosen, E.load_game navigated away — this
+		# coroutine was already abandoned before reaching here.
+
 	if not Globals.opening_played:
 		await _run_opening_sequence()
 	else:
