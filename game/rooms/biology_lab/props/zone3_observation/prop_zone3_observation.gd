@@ -8,9 +8,7 @@ func _on_click() -> void:
 		await C.Nathe.say("Zone 3 is still actively splitting. Moderate conditions, perpetual division. A control group that never resolved.")
 		return
 
-	var zone3_seen: bool = Globals.bio_zone3_seen
-
-	if not zone3_seen:
+	if not Globals.bio_zone3_seen:
 		Globals.bio_zone3_seen = true
 		await C.Nathe.say("Zone 3 observation port. Moderate conditions — 20°C, medium lighting, 45% humidity.")
 		await C.Nathe.say("The organisms here are actively dividing. Mid-split. Some cells halfway between one color and two.")
