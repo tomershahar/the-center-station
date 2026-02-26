@@ -27,6 +27,7 @@ D="*uid://c6gugkithegt4"
 A="*uid://4al1ldnlrrn5"
 G="*uid://bg5y1i4icreec"
 ARIA="*res://game/systems/aria_intercom.gd"
+SaveManager="*res://game/systems/save_manager.gd"
 
 [display]
 
