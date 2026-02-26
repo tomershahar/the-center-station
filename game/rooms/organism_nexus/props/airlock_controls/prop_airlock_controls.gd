@@ -37,6 +37,16 @@ func _on_click() -> void:
 	await C.Roger.say("I know.")
 	Globals.final_complete = true
 	C.Roger.stop_hints()
+	await E.wait(1.5)
+
+	# Roll credits
+	var cl := CanvasLayer.new()
+	cl.layer = 100
+	get_tree().root.add_child(cl)
+	var credits := preload("res://game/credits/credits.tscn").instantiate()
+	cl.add_child(credits)
+	await credits.done
+	cl.queue_free()
 
 
 func _on_right_click() -> void:
