@@ -8,22 +8,18 @@ func _on_click() -> void:
 		await C.Nathe.say("Zone 2 organisms have unified. Comfortable conditions maintained. All factions cooperating.")
 		return
 
-	var zone2_seen: bool = Globals.bio_zone2_seen
-	var zone1_stressed_seen: bool = Globals.bio_zone1_stressed_seen
-	var zone2_comforted: bool = Globals.bio_zone2_comforted
-
-	if zone2_comforted:
+	if Globals.bio_zone2_comforted:
 		await C.Nathe.say("Zone 2 organisms — one unified color. Comfortable conditions, unified colony. The reverse of what stress does.")
 		return
 
-	if not zone2_seen:
+	if not Globals.bio_zone2_seen:
 		Globals.bio_zone2_seen = true
 		await C.Nathe.say("Zone 2 environmental panel. Currently: 14°C, minimal lighting, 20% humidity.")
 		await C.Roger.say("Organisms in Zone 2 are sparse. Two distinct color signatures — red and blue clusters. Completely separated.")
 		await C.Nathe.say("Harsh conditions. And the organism has split into factions. I'll note this.")
 		return
 
-	if not zone1_stressed_seen:
+	if not Globals.bio_zone1_stressed_seen:
 		await C.Nathe.say("Two distinct factions in Zone 2. They're not mixing. The cold, dark environment is clearly doing something to them.")
 		return
 
