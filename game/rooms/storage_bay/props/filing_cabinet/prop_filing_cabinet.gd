@@ -14,7 +14,7 @@ func _on_click() -> void:
 		C.Nathe.queue_say("Oh! Budget code right here on Form 12-D. 'GENERAL OPERATIONS — CODE: GO-7734.' Perfect."),
 		C.Roger.queue_say("GO-7734. Noted."),
 	])
-	get_parent().get_parent().set_meta("budget_code_found", true)
+	Globals.storage_budget_code_found = true
 
 
 func _on_right_click() -> void:

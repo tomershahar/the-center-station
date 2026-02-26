@@ -3,7 +3,7 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	if not get_meta("ready_to_sign", false):
+	if not Globals.storage_ready_to_sign:
 		await C.Nathe.say("It's a signature scanner. I need to fill out the form first.")
 		return
 
