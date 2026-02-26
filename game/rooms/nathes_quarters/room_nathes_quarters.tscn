@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dcio0p7ivq6py" path="res://game/rooms/nathes_quarters/props/charging_dock/prop_charging_dock.tscn" id="6_dock"]
 [ext_resource type="PackedScene" uid="uid://bi5vhqckemdqa" path="res://game/rooms/nathes_quarters/props/door_panel/prop_door_panel.tscn" id="7_panel"]
 [ext_resource type="PackedScene" uid="uid://dk7w8semgnnsc" path="res://game/rooms/nathes_quarters/hotspots/exit_door/hotspot_exit_door.tscn" id="8_door"]
+[ext_resource type="PackedScene" uid="uid://nqpf000001" path="res://game/rooms/nathes_quarters/props/photo_frame/prop_photo_frame.tscn" id="9_pf"]
 
 [ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
 [node name="RoomNathesQuarters" type="Node2D" unique_id=415263796]
@@ -48,6 +49,9 @@ position = Vector2(288, 118)
 
 [node name="DoorPanel" parent="Props" unique_id=901199181 instance=ExtResource("7_panel")]
 position = Vector2(305, 82)
+
+[node name="PhotoFrame" parent="Props" instance=ExtResource("9_pf")]
+position = Vector2(196, 72)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=314633549]
 

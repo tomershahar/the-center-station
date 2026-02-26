@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://arc000000001"]
+
+[ext_resource type="Script" path="res://game/mini_games/arcade_machine/arcade_machine.gd" id="1"]
+
+[node name="ArcadeMachine" type="Node2D"]
+script = ExtResource("1")

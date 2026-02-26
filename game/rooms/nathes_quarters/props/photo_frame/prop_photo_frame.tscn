@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://nqpf000001"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/photo_frame/prop_photo_frame.gd" id="1"]
+
+[node name="PhotoFrame" type="Area2D"]
+script = ExtResource("1")
+script_name = "PhotoFrame"
+description = "Photo Frame"
+interaction_polygon = PackedVector2Array(-9, -7, 9, -7, 9, 7, -9, 7)
+
+[node name="Placeholder" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-9, -7, 9, -7, 9, 7, -9, 7)
+color = Color(0.55, 0.45, 0.3, 0.9)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-9, -7, 9, -7, 9, 7, -9, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

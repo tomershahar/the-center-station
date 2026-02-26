@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://nqpf000002"]
+
+[ext_resource type="Script" path="res://game/rooms/nathes_quarters/props/photo_frame/prop_photo_frame_state.gd" id="1_state"]
+
+[resource]
+resource_name = "PhotoFrame"
+script = ExtResource("1_state")
+script_name = "PhotoFrame"
+scene = "res://game/rooms/nathes_quarters/props/photo_frame/prop_photo_frame.tscn"
