@@ -5,14 +5,14 @@ func _on_click() -> void:
 	C.Roger.reset_hint_timer()
 
 	# First time approaching the cabinet
-	if not get_meta("arcade_visited", false):
-		set_meta("arcade_visited", true)
+	if not Globals.ee_arcade_visited:
+		Globals.ee_arcade_visited = true
 		await C.Nathe.say("An arcade cabinet. With actual games.")
 		await C.Roger.say("Two. Someone took their leisure time seriously.")
 
 	# Reveal organism game the first time after credits
-	if Globals.final_complete and not get_meta("organism_revealed", false):
-		set_meta("organism_revealed", true)
+	if Globals.final_complete and not Globals.ee_organism_revealed:
+		Globals.ee_organism_revealed = true
 		await C.Nathe.say("Wait. There's a third game now. I did not put that there.")
 		await C.Roger.say("The organism added it while we were busy saving it.")
 		await C.Nathe.say("It made a video game.")

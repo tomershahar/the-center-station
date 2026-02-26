@@ -4,11 +4,11 @@ extends PopochiuProp
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
 
-	if get_meta("photo_seen", false):
+	if Globals.ee_photo_seen:
 		await C.Nathe.say("A photo of the assembly lab. Roger's birthplace, more or less.")
 		return
 
-	set_meta("photo_seen", true)
+	Globals.ee_photo_seen = true
 
 	await C.Nathe.say("This photo frame — I've walked past it every day and never actually looked.")
 	await C.Nathe.say("That's the assembly room. Where Roger was first put together.")

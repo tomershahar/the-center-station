@@ -4,7 +4,7 @@ extends PopochiuProp
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
 
-	if get_meta("logs_read", false):
+	if Globals.ee_logs_read:
 		await C.Nathe.say("I already found ARIA's logs. Some things you can't un-read.")
 		return
 
@@ -30,7 +30,7 @@ func _on_click() -> void:
 	await C.Nathe.say("'Resume functions.'")
 	await E.wait(0.8)
 
-	set_meta("logs_read", true)
+	Globals.ee_logs_read = true
 
 	await C.Nathe.say("ARIA. I found your logs.")
 	await ARIA.say("Those are classified internal maintenance records. Access is unauthorized.")
