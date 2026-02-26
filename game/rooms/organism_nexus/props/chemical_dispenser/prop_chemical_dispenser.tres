@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://onp000000009"]
+
+[ext_resource type="Script" path="res://game/rooms/organism_nexus/props/chemical_dispenser/prop_chemical_dispenser_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ChemicalDispenser"
+script = ExtResource("1_bst")
+script_name = "ChemicalDispenser"
+scene = "res://game/rooms/organism_nexus/props/chemical_dispenser/prop_chemical_dispenser.tscn"

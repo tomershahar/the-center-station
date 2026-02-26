@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://onp00000000c"]
+
+[ext_resource type="Script" path="res://game/rooms/organism_nexus/props/airlock_controls/prop_airlock_controls_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "AirlockControls"
+script = ExtResource("1_bst")
+script_name = "AirlockControls"
+scene = "res://game/rooms/organism_nexus/props/airlock_controls/prop_airlock_controls.tscn"

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://odp000000005" path="res://game/rooms/observation_deck/props/observation_window/prop_observation_window.tscn" id="4_ow"]
 [ext_resource type="PackedScene" uid="uid://odp000000008" path="res://game/rooms/observation_deck/props/station_schematics/prop_station_schematics.tscn" id="5_ss"]
 [ext_resource type="PackedScene" uid="uid://odp00000000b" path="res://game/rooms/observation_deck/props/faction_notes/prop_faction_notes.tscn" id="6_fn"]
+[ext_resource type="PackedScene" uid="uid://odh000000005" path="res://game/rooms/observation_deck/hotspots/to_organism_nexus/hotspot_to_organism_nexus.tscn" id="7_nx"]
 
 [ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
 [node name="RoomObservationDeck" type="Node2D"]
@@ -45,6 +46,9 @@ position = Vector2(110, 145)
 
 [node name="ToMainCorridor" parent="Hotspots" instance=ExtResource("2_mc")]
 position = Vector2(20, 140)
+
+[node name="ToOrganismNexus" parent="Hotspots" instance=ExtResource("7_nx")]
+position = Vector2(300, 90)
 
 [node name="Regions" type="Node2D" parent="."]
 

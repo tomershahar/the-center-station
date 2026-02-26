@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://onr000000002"]
+
+[ext_resource type="Script" uid="uid://onr000000001" path="res://game/rooms/organism_nexus/room_organism_nexus.gd" id="1_room"]
+[ext_resource type="PackedScene" uid="uid://onh000000002" path="res://game/rooms/organism_nexus/hotspots/to_observation_deck/hotspot_to_observation_deck.tscn" id="2_od"]
+[ext_resource type="PackedScene" uid="uid://onp000000002" path="res://game/rooms/organism_nexus/props/frequency_emitter/prop_frequency_emitter.tscn" id="3_fe"]
+[ext_resource type="PackedScene" uid="uid://onp000000005" path="res://game/rooms/organism_nexus/props/isolation_grid/prop_isolation_grid.tscn" id="4_ig"]
+[ext_resource type="PackedScene" uid="uid://onp000000008" path="res://game/rooms/organism_nexus/props/chemical_dispenser/prop_chemical_dispenser.tscn" id="5_cd"]
+[ext_resource type="PackedScene" uid="uid://onp00000000b" path="res://game/rooms/organism_nexus/props/airlock_controls/prop_airlock_controls.tscn" id="6_ac"]
+
+[ext_resource type="PackedScene" uid="uid://vhq4yiupk3b" path="res://game/characters/roger/character_roger.tscn" id="roger_char"]
+[node name="RoomOrganismNexus" type="Node2D"]
+script = ExtResource("1_room")
+script_name = "OrganismNexus"
+width = 320
+height = 180
+popochiu_placeholder = null
+
+
+[node name="Background" type="ColorRect" parent="."]
+color = Color(0.12, 0.04, 0.06, 1)
+size = Vector2(320, 180)
+z_index = -1
+
+[node name="RoomLabel" type="Label" parent="."]
+position = Vector2(4, 2)
+text = "Organism Nexus"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="FrequencyEmitter" parent="Props" instance=ExtResource("3_fe")]
+position = Vector2(60, 120)
+
+[node name="IsolationGrid" parent="Props" instance=ExtResource("4_ig")]
+position = Vector2(160, 50)
+
+[node name="ChemicalDispenser" parent="Props" instance=ExtResource("5_cd")]
+position = Vector2(260, 120)
+
+[node name="AirlockControls" parent="Props" instance=ExtResource("6_ac")]
+position = Vector2(300, 90)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ToObservationDeck" parent="Hotspots" instance=ExtResource("2_od")]
+position = Vector2(20, 140)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Roger" parent="Characters" instance=ExtResource("roger_char")]
+position = Vector2(160, 120)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://odh000000005"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/hotspots/to_organism_nexus/hotspot_to_organism_nexus.gd" id="1"]
+
+[node name="ToOrganismNexus" type="Area2D"]
+script = ExtResource("1")
+script_name = "ToOrganismNexus"
+description = "Organism Nexus"
+interaction_polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)

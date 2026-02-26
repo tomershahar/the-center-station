@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://onr000000003"]
+
+[ext_resource type="Script" path="res://game/rooms/organism_nexus/room_organism_nexus_state.gd" id="1_a1hly"]
+
+[resource]
+resource_name = "OrganismNexus"
+script = ExtResource("1_a1hly")
+script_name = "OrganismNexus"
+scene = "res://game/rooms/organism_nexus/room_organism_nexus.tscn"

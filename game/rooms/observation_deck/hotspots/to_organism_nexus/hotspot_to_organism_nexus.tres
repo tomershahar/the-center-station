@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://odh000000006"]
+
+[ext_resource type="Script" path="res://game/rooms/observation_deck/hotspots/to_organism_nexus/hotspot_to_organism_nexus_state.gd" id="1_bst"]
+
+[resource]
+resource_name = "ToOrganismNexus"
+script = ExtResource("1_bst")
+script_name = "ToOrganismNexus"
+scene = "res://game/rooms/observation_deck/hotspots/to_organism_nexus/hotspot_to_organism_nexus.tscn"
