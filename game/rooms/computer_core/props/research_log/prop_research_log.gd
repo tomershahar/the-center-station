@@ -4,7 +4,6 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.math_complete:
 		await C.Nathe.say("My research log. Every experiment, every data point. The organism used all of it.")
@@ -14,10 +13,8 @@ func _on_click() -> void:
 		await C.Nathe.say("Station research log. My experiment records are here — but the other monitors are still showing noise I can't interpret.")
 		return
 
-	var already_read: bool = room.get_meta("research_log_read", false)
-
-	if not already_read:
-		room.set_meta("research_log_read", true)
+	if not Globals.cc_research_log_read:
+		Globals.cc_research_log_read = true
 		await C.Nathe.say("Station research log. There's a record of every experiment I've run. The frequency calibration values. The molecular weights.")
 		if Globals.has_reproduction_data:
 			await C.Nathe.say("The greenhouse zone growth percentages. All of it, timestamped.")

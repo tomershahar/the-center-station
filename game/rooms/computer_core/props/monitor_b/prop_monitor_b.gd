@@ -4,13 +4,12 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.math_complete:
 		await C.Nathe.say("Faction B — precision. They corrected my frequency rounding errors to communicate. Balance and accuracy.")
 		return
 
-	if room.get_meta("monitor_b_decoded", false):
+	if Globals.cc_monitor_b_decoded:
 		await C.Nathe.say("Faction B's pattern. Precision strategy — using my frequency calibration data, corrected to exact values.")
 		return
 
@@ -18,7 +17,7 @@ func _on_click() -> void:
 		await C.Nathe.say("The pattern is structured but I can't decode it yet. The Physics Lab frequency data is required.")
 		return
 
-	if not room.get_meta("research_log_read", false):
+	if not Globals.cc_research_log_read:
 		await C.Nathe.say("Numbers cycling in a pattern. Structured, not random — but I can't place them. I should check the research log on Monitor 4.")
 		return
 
@@ -28,9 +27,9 @@ func _on_click() -> void:
 	await C.Nathe.say("It corrected my rounding errors? Every approximation I made — it's giving me the true precise frequency.")
 	await C.Roger.say("Not inflated. Not reduced. Exactly right.")
 	await C.Nathe.say("Faction B's message: accuracy. Return to the true value. Maintain precision. That's their strategy — balance.")
-	room.set_meta("monitor_b_decoded", true)
+	Globals.cc_monitor_b_decoded = true
 
-	if _all_decoded(room):
+	if _all_decoded():
 		await _run_discovery()
 
 
@@ -38,10 +37,10 @@ func _on_right_click() -> void:
 	await C.Nathe.say("One of three data monitors. The numbers keep cycling. Somehow familiar.")
 
 
-func _all_decoded(room: Node) -> bool:
-	return (room.get_meta("monitor_a_decoded", false)
-		and room.get_meta("monitor_b_decoded", false)
-		and room.get_meta("monitor_c_decoded", false))
+func _all_decoded() -> bool:
+	return (Globals.cc_monitor_a_decoded
+		and Globals.cc_monitor_b_decoded
+		and Globals.cc_monitor_c_decoded)
 
 
 func _run_discovery() -> void:

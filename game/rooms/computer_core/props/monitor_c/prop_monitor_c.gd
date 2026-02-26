@@ -4,13 +4,12 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.math_complete:
 		await C.Nathe.say("Faction C — retreat. They took my biology growth rates and reduced them toward zero. Minimize. Don't expose.")
 		return
 
-	if room.get_meta("monitor_c_decoded", false):
+	if Globals.cc_monitor_c_decoded:
 		await C.Nathe.say("Faction C's pattern. Retreat strategy — using my greenhouse zone data, all values trending down toward minimum.")
 		return
 
@@ -18,7 +17,7 @@ func _on_click() -> void:
 		await C.Nathe.say("The pattern is structured but I can't make sense of it yet. I need more data from the other labs first.")
 		return
 
-	if not room.get_meta("research_log_read", false):
+	if not Globals.cc_research_log_read:
 		await C.Nathe.say("Numbers cycling in a pattern. Structured, not random — but I can't place them. I should check the research log on Monitor 4.")
 		return
 
@@ -32,9 +31,9 @@ func _on_click() -> void:
 	await C.Nathe.say("Faction C took my biology data and pushed every number down. Toward nothing. Toward minimum.")
 	await C.Roger.say("Consolidate. Stop spreading. Don't attract attention.")
 	await C.Nathe.say("Faction C's message: retreat. Minimize exposure. Their strategy is the opposite of Faction A's.")
-	room.set_meta("monitor_c_decoded", true)
+	Globals.cc_monitor_c_decoded = true
 
-	if _all_decoded(room):
+	if _all_decoded():
 		await _run_discovery()
 
 
@@ -42,10 +41,10 @@ func _on_right_click() -> void:
 	await C.Nathe.say("One of three data monitors. The pattern is converging on something — or toward nothing.")
 
 
-func _all_decoded(room: Node) -> bool:
-	return (room.get_meta("monitor_a_decoded", false)
-		and room.get_meta("monitor_b_decoded", false)
-		and room.get_meta("monitor_c_decoded", false))
+func _all_decoded() -> bool:
+	return (Globals.cc_monitor_a_decoded
+		and Globals.cc_monitor_b_decoded
+		and Globals.cc_monitor_c_decoded)
 
 
 func _run_discovery() -> void:
