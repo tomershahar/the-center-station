@@ -5,13 +5,12 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.final_complete:
 		await C.Nathe.say("The dispenser's been used. The two-stage solvent broke A's structural bonds around the airlock. Can't take that back.")
 		return
 
-	if room.get_meta("step3_done", false):
+	if Globals.nexus_step3_done:
 		await C.Nathe.say("The solvent has already been applied. A's structural bonds in the airlock passage are compromised.")
 		return
 
@@ -19,7 +18,7 @@ func _on_click() -> void:
 		await C.Nathe.say("There's a chemical dispenser here — standard issue for this module. I'd need the solvent formula from the Chemistry Lab to use it.")
 		return
 
-	if not room.get_meta("step2_done", false):
+	if not Globals.nexus_step2_done:
 		await C.Nathe.say("The solvent will work — but A's structural bonds are still at full strength. It'll be more effective after the environmental stress has already weakened them.")
 		return
 
@@ -39,7 +38,7 @@ func _on_click() -> void:
 	await C.Nathe.say("A's grip on the airlock is gone. The passage is clearing.")
 	await C.Roger.say("C is pressing forward. They can see the path now.")
 	await C.Nathe.say("Good. Now I open the door.")
-	room.set_meta("step3_done", true)
+	Globals.nexus_step3_done = true
 
 
 func _on_right_click() -> void:

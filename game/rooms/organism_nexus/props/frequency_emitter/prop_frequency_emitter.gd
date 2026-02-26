@@ -4,13 +4,12 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.final_complete:
 		await C.Nathe.say("The frequency emitter is still broadcasting on the B-C coalition frequencies. B is holding the room.")
 		return
 
-	if room.get_meta("step1_done", false):
+	if Globals.nexus_step1_done:
 		await C.Nathe.say("The broadcaster is synced and running. B and C's coalition is stable under the calming frequencies.")
 		return
 
@@ -23,7 +22,7 @@ func _on_click() -> void:
 	await C.Roger.say("Broadcasting. B and C growth patterns are stabilizing under the reinforced signal.")
 	await C.Roger.say("The coalition is holding. Both factions are steady.")
 	await C.Nathe.say("Good. While they're anchored, I can go after A without B considering a defensive merger.")
-	room.set_meta("step1_done", true)
+	Globals.nexus_step1_done = true
 
 
 func _on_right_click() -> void:

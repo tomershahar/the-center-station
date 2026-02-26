@@ -4,17 +4,16 @@ extends PopochiuProp
 
 func _on_click() -> void:
 	C.Roger.reset_hint_timer()
-	var room = get_parent().get_parent()
 
 	if Globals.final_complete:
 		await C.Nathe.say("The isolation grid is still active. A's zone was stress-fractured. The grid held B and C's areas stable throughout.")
 		return
 
-	if room.get_meta("step2_done", false):
+	if Globals.nexus_step2_done:
 		await C.Nathe.say("A's zone is under targeted environmental stress. High temp, high light — the isolation grid is keeping B and C's areas unaffected.")
 		return
 
-	if not room.get_meta("step1_done", false):
+	if not Globals.nexus_step1_done:
 		await C.Nathe.say("I could activate this — but if I stress A before B and C are stabilized, they might interpret A's reaction as aggression and consider merging for safety. Coalition first.")
 		return
 
@@ -27,7 +26,7 @@ func _on_click() -> void:
 	await C.Roger.say("A's zone is responding. B and C are unaffected — the grid is isolating the stimulus perfectly.")
 	await C.Nathe.say("A's growth is starting to divide. Environmental stress triggering fission — same mechanism as the greenhouse, but targeted.")
 	await C.Roger.say("A is weakening. The structural bonds are under pressure.")
-	room.set_meta("step2_done", true)
+	Globals.nexus_step2_done = true
 
 
 func _on_right_click() -> void:

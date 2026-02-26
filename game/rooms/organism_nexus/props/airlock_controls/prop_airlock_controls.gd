@@ -9,11 +9,9 @@ func _on_click() -> void:
 		await C.Nathe.say("The airlock is sealed again. C is on the other side — on the planet surface. B holds the station.")
 		return
 
-	var room = get_parent().get_parent()
-
-	if not room.get_meta("step3_done", false):
+	if not Globals.nexus_step3_done:
 		# Partial implementation of wrong-order consequence: ARIA opens it, but passage is blocked
-		if room.get_meta("step1_done", false) or room.get_meta("step2_done", false):
+		if Globals.nexus_step1_done or Globals.nexus_step2_done:
 			await C.Nathe.say("A's growth is still physically blocking the airlock passage. Opening the door won't help C if there's a wall of organism in the way.")
 		else:
 			await C.Nathe.say("I need to clear A's growth from the passage before opening the airlock. Otherwise C just hits a wall.")
